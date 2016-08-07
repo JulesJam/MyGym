@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :created_activities, class_name: "Activity", foreign_key: "user_id"
   has_and_belongs_to_many :activities_attending, class_name: "Activity", join_table: "activities_users"
+  after_initialize :set_default
+
+  def set_default
+    self.admin_level ||= 4
+    self.total_visits = 0
+    self.image = 'placeholder.png'
+
+  end
 end

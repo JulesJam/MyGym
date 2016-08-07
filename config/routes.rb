@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get "contact_us", to:'statics#contact_us'
 
+  get "user_list", to:'users#index'
+
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

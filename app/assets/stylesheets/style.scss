@@ -1,0 +1,26 @@
+body{
+  font-family: futura;
+  position: relative;
+}
+
+
+.navbar{
+  display:block;
+  width: 100%;
+  top:0%;
+  left:0%;
+  height:30px;
+  background-color:rgba(219, 242, 234, .8)
+}
+
+.nav-item{
+  display:inline;
+  list-style: none;
+  padding-left:10px;
+
+}
+
+.edit_page_block{
+  width:150px;
+  float:left;
+}
