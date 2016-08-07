@@ -1,0 +1,2 @@
+json.extract! activity, :id, :activity_name, :description, :location, :date, :start_time, :duration, :number_of_places, :status, :active, :image, :places_taken, :user_id, :created_at, :updated_at
+json.url activity_url(activity, format: :json)

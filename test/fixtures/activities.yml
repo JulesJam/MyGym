@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activity_name: MyString
+  description: MyText
+  location: MyString
+  date: 2016-08-06
+  start_time: 2016-08-06 14:56:45
+  duration: 2016-08-06 14:56:45
+  number_of_places: 1
+  status: MyString
+  active: false
+  image: MyString
+  places_taken: 1
+  user: one
+
+two:
+  activity_name: MyString
+  description: MyText
+  location: MyString
+  date: 2016-08-06
+  start_time: 2016-08-06 14:56:45
+  duration: 2016-08-06 14:56:45
+  number_of_places: 1
+  status: MyString
+  active: false
+  image: MyString
+  places_taken: 1
+  user: two

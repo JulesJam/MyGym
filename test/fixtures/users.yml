@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  first_name: MyString
+  last_name: MyString
+  admin_level: 1
+  date_of_bith: 2016-08-06
+  image: MyText
+  accept_comms: false
+  accept_proms: false
+  mobile_tel_number: MyString
+  accept_texts: false
+  other_tel_number: MyString
+  post_code: MyString
+  house_flat_name_number: MyString
+  street_address: MyString
+  locality: MyString
+  city: MyString
+  last_visit_date: 2016-08-06 10:54:48
+  total_visits: 1
+  membership_expiry_date: 2016-08-06
+  membership_type_id: 1
+  profile: MyText
+
+two:
+  username: MyString
+  first_name: MyString
+  last_name: MyString
+  admin_level: 1
+  date_of_bith: 2016-08-06
+  image: MyText
+  accept_comms: false
+  accept_proms: false
+  mobile_tel_number: MyString
+  accept_texts: false
+  other_tel_number: MyString
+  post_code: MyString
+  house_flat_name_number: MyString
+  street_address: MyString
+  locality: MyString
+  city: MyString
+  last_visit_date: 2016-08-06 10:54:48
+  total_visits: 1
+  membership_expiry_date: 2016-08-06
+  membership_type_id: 1
+  profile: MyText

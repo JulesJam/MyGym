@@ -1,0 +1,77 @@
+<%= form_for(activity) do |f| %>
+  <% if activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :activity_name %>
+    <%= f.text_field :activity_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_time %>
+    <%= f.time_select :start_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duration %>
+    <%= f.time_select :duration %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number_of_places %>
+    <%= f.number_field :number_of_places %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %>
+    <%= f.check_box :active %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :places_taken %>
+    <%= f.number_field :places_taken %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
