@@ -13,8 +13,8 @@
      <nav class="navbar navbar-light bg-faded">
         <ul class="nav navbar-nav">
          <% if current_user %>
-          <li class="nav-item">Current User...<%= current_user.email %></li>
-          <li class="nav-item"><%= link_to "Classes" %></li>
+          <li class="nav-item">Current User...<%= current_user.email %>&nbspUser Id...<%=current_user.id%></li>
+          <li class="nav-item"><%= link_to"Classes", activities_path %></li>
           <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           <% else %>
           <li class="nav-item"><%= link_to "Sign In", new_user_session_path %></li>
