@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :set_user, only: [:show]
+  before_action :authenticate_user!
 
 
   def index
@@ -8,8 +8,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+  @user = User.find(params[:id])
+  
   end
+
+
 
 
   private

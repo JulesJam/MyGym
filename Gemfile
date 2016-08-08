@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'carrierwave', '0.10.0'
 gem 'ideal_postcodes'
 gem 'devise', '~> 4.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

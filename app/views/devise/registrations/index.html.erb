@@ -5,7 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>username</th>
+      <th>Image</th>
+      <th>Username</th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Admin Level</th>
@@ -22,6 +23,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td> <%= image_tag user.user_image.url, width:100 %></td>
         <td><%= user.username %></td>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
@@ -31,7 +33,7 @@
         <td><%= user.accept_texts %></td>
         <td><%= user.membership_expiry_date%></td>
         <td><%= user.total_visits %></td>
-        <td><%= link_to 'Show', secure_path %></td>
+        <td><%= link_to 'Show', user_path(user) %></td>
         <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
         <td><%= link_to 'Destroy', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

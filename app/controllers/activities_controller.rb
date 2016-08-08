@@ -63,6 +63,17 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def book
+    activity = Activity.find(params[:id])
+    current_user.activities_attending << activity
+    redirect_to activities_path
+    flash[:notice] = 'Event was saved.'
+  end
+
+
+ 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_activity

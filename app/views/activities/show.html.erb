@@ -59,6 +59,13 @@
   <strong>Created By</strong>
   <%= @activity.user_id %>
 </p>
+  
 
+
+<%= link_to activity_book_path, method: :post do %>
+  Book <strong><%= @activity.activity_name %>&nbsp<%= @activity.date %>&nbsp<%= @activity.start_time %>
+<% end%>
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>
+
+
