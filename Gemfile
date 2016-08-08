@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'rqrcode-with-patches', '~> 0.5.4'
 gem 'carrierwave', '0.10.0'
 gem 'ideal_postcodes'
 gem 'devise', '~> 4.2.0'
