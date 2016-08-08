@@ -3,7 +3,9 @@ class QrCodesController < ApplicationController
   end
 
   def create
-    @qr = RQRCode::QRCode.new( qr_code_params[:text], size: 4)
+    @user=current_user
+    qrText= current_user.first_name+" "+current_user.last_name+"Membership Status "
+    @qr = RQRCode::QRCode.new( qrText, size: 4)
   end
 
   private 
