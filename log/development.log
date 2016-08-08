@@ -20259,3 +20259,1477 @@ Processing by QrCodesController#create as HTML
 Completed 200 OK in 78ms (Views: 23.7ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/users" for ::1 at 2016-08-08 16:46:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 204ms (Views: 164.7ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 16:46:13 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit.3" for ::1 at 2016-08-08 16:46:23 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/edit.4" for ::1 at 2016-08-08 16:46:28 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/edit.4" for ::1 at 2016-08-08 16:46:59 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 108ms (Views: 104.1ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 16:47:51 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I8M2NDH4G4rTjPlfOxBXX46i38qyzPctIbxwnqTwxymWri3pA1WtHzIfsZdfJIawOMDXZXabKJEndKZfbAEj0w==", "user"=>{"email"=>"john.doe@mail", "user_image"=>#<ActionDispatch::Http::UploadedFile:0x007fe40b6ac290 @tempfile=#<Tempfile:/var/folders/6_/ft5s2q6j7rx92jw4xqwyvcz80000gn/T/RackMultipart20160808-49221-12xsu6z.jpeg>, @original_filename="mepic.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[user_image]\"; filename=\"mepic.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"John", "last_name"=>"Doe", "admin_level"=>"3", "date_of_birth"=>"1979-12-20", "accept_comms"=>"1", "accept_proms"=>"1", "mobile_tel_number"=>"0956835363", "post_code"=>"SW4 6HX", "house_flat_name_number"=>"5", "street_address"=>"", "locality"=>"Clapham", "city"=>"London", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameter: street_address
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "user_image" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_image", "mepic.jpeg"], ["updated_at", 2016-08-08 15:47:51 UTC], ["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 140ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 16:47:51 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 16:47:53 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 16:48:05 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-08-08 16:48:30 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"atg/TS9F14BNzvOFlNP/taR+lMlveLK/nstC5I4uBoXftSSQHehhFaxdu03w5y5aEhycZqsvbQOYA5QlRt/ifw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", 2016-08-08 15:48:30 UTC], ["user_image", "mepic.jpeg"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 16:48:30 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 16:48:35 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 16:48:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-08-08 16:48:45 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FU3mUFfZtBi/K1EDWmlX2bCDcuSSx5XI22HkInC/RhLBIwMDrRiLxGMkicAyZ24QnEhjVwZmJlrTB9hoRuV3+Q==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "julian.wyatt@me.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4, "user_image" = $5 WHERE "users"."id" = $6[0m  [["current_sign_in_at", 2016-08-08 15:48:45 UTC], ["last_sign_in_at", 2016-08-08 15:24:58 UTC], ["sign_in_count", 14], ["updated_at", 2016-08-08 15:48:45 UTC], ["user_image", nil], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 131ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/activities" for ::1 at 2016-08-08 16:48:45 +0100
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_activities_index_html_erb__2691788787032578591_70308745364240 at /Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/activities/index.html.erb:25)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_activities_index_html_erb__2691788787032578591_70308745364240 at /Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/activities/index.html.erb:25)
+  Rendered activities/index.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 34.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 16:48:50 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 16:48:55 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 16:49:20 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmXdZUDTcXsBadPFfE87HHxmUPmTk4JcQX/1xAjRILAUWwBrV5DJGQcbEO0JhL/Lp8t08PRxYRePvQuhQtehIQ==", "user"=>{"email"=>"julian.wyatt@me.com", "user_image"=>#<ActionDispatch::Http::UploadedFile:0x007fe40b2d2b60 @tempfile=#<Tempfile:/var/folders/6_/ft5s2q6j7rx92jw4xqwyvcz80000gn/T/RackMultipart20160808-49221-1c8boon.png>, @original_filename="MeSkiing.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[user_image]\"; filename=\"MeSkiing.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"0", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"", "locality"=>"", "city"=>"London", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: street_address
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "user_image" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_image", "MeSkiing.png"], ["updated_at", 2016-08-08 15:49:20 UTC], ["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 131ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 16:49:20 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 16:49:22 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 16:51:10 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `qr_codes_create' for #<#<Class:0x007fe40a78e420>:0x007fe40c485970>
+Did you mean?  qr_codes_create_url
+               qr_codes_create_path
+               qr_codes_path):
+    15:          <% if current_user %>
+    16:           <li class="nav-item">Current User...<%= current_user.email %>&nbspUser Id...<%=current_user.id%></li>
+    17:           <li class="nav-item"><%= link_to"Classes", activities_path %></li>
+    18:           <li class="nav-item"><%= link_to"Membership Card", qr_codes_create %></li>
+    19:          <li class="nav-item"><%= link_to"User List",users_path%></li>
+    20:          <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    21:           <% else %>
+  
+app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__1380019840295774243_70308757340540'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.1ms)
+Started GET "/users" for ::1 at 2016-08-08 16:51:24 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 16:51:26 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 82ms (Views: 26.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:04:13 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/qr_codes/create.html.erb:19: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze; else 
+              ^):
+  
+app/views/qr_codes/create.html.erb:19: syntax error, unexpected keyword_else, expecting keyword_end
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.0ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:05:01 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `blank' for nil:NilClass
+Did you mean?  blank?):
+    14: <% end %>
+    15: </table>
+    16: <br />
+    17: <% @user.membership_expiry_date.blank || !@user.membership_expiry_date.future? do%>
+    18:   <h2>Expired</h2>
+    19: <% end %>
+  
+app/views/qr_codes/create.html.erb:17:in `_app_views_qr_codes_create_html_erb__3405890706160051690_70308787485280'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.3ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:05:20 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 73ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:05:52 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 84ms (Views: 27.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:06:18 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 81ms (Views: 24.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:06:38 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 76ms (Views: 22.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:07:22 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 82ms (Views: 27.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:07:52 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/qr_codes/create.html.erb:17: syntax error, unexpected '<'
+'.freeze; @user.membership_expiry_date.blank?  do <h2>Expired</h2>
+                                                   ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/qr_codes/create.html.erb:20: unknown regexp option - h
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/qr_codes/create.html.erb:20: syntax error, unexpected tINTEGER, expecting keyword_end
+...output_buffer.safe_append='</h2>
+...                               ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/qr_codes/create.html.erb:22: unterminated string meets end of file
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/qr_codes/create.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/qr_codes/create.html.erb:17: syntax error, unexpected '<'
+app/views/qr_codes/create.html.erb:20: unknown regexp option - h
+app/views/qr_codes/create.html.erb:20: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/qr_codes/create.html.erb:22: unterminated string meets end of file
+app/views/qr_codes/create.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.7ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:08:29 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `future?' for nil:NilClass):
+    14: <% end %>
+    15: </table>
+    16: <br />
+    17: <% @user.membership_expiry_date.future?do%>
+    18:   <h2>Expired</h2>
+    19: <% end %>
+    20: <h2>Expires on <%=@user.membership_expiry_date%></h2>
+  
+app/views/qr_codes/create.html.erb:17:in `_app_views_qr_codes_create_html_erb__3405890706160051690_70308795943220'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.4ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:08:42 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/views/qr_codes/create.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/qr_codes/create.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.9ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:08:51 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `future' for nil:NilClass):
+    14: <% end %>
+    15: </table>
+    16: <br />
+    17: <% @user.membership_expiry_date.future do%>
+    18:   <h2>Expired</h2>
+    19: <% end %>
+    20: <h2>Expires on <%=@user.membership_expiry_date%></h2>
+  
+app/views/qr_codes/create.html.erb:17:in `_app_views_qr_codes_create_html_erb__3405890706160051690_70308744693300'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.4ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:09:00 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `future?' for nil:NilClass):
+    14: <% end %>
+    15: </table>
+    16: <br />
+    17: <% @user.membership_expiry_date.future? do%>
+    18:   <h2>Expired</h2>
+    19: <% end %>
+    20: <h2>Expires on <%=@user.membership_expiry_date%></h2>
+  
+app/views/qr_codes/create.html.erb:17:in `_app_views_qr_codes_create_html_erb__3405890706160051690_70308710988120'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.1ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:09:14 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `blank' for nil:NilClass
+Did you mean?  blank?):
+    14: <% end %>
+    15: </table>
+    16: <br />
+    17: <% !@user.membership_expiry_date.blank do%>
+    18:   <h2>Expired</h2>
+    19: <% end %>
+    20: <h2>Expires on <%=@user.membership_expiry_date%></h2>
+  
+app/views/qr_codes/create.html.erb:17:in `_app_views_qr_codes_create_html_erb__3405890706160051690_70308768091600'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.1ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:09:27 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 70ms (Views: 23.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:11:52 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 85ms (Views: 28.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:16:00 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 92ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:16:23 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 106ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:17:07 +0100
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...hip_expiry_date > Date.today? "Expired" : "Valid"
+...                               ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+..._date > Date.today? "Expired" : "Valid"
+...                               ^):
+  
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:17:19 +0100
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...ship_expiry_date > Date.today "Expired" : "Valid"
+...                               ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+...y_date > Date.today "Expired" : "Valid"
+...                               ^):
+  
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:17:39 +0100
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...hip_expiry_date > Date.today? "Expired" : "Valid"
+...                               ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+..._date > Date.today? "Expired" : "Valid"
+...                               ^):
+  
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:18:02 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 104ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:18:17 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `present' for nil:NilClass
+Did you mean?  present?
+               presence):
+  
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.8ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:18:24 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 106ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:18:52 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 93ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:34:35 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 104ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:35:08 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 102ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:35:12 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 88ms (Views: 26.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:36:45 +0100
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:8: syntax error, unexpected keyword_else, expecting ':'
+    else @expiry ="Valid"
+        ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:20: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/qr_codes_controller.rb:8: syntax error, unexpected keyword_else, expecting ':'
+app/controllers/qr_codes_controller.rb:20: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.1ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:38:00 +0100
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:9: syntax error, unexpected keyword_else, expecting ':'
+    else 
+        ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:22: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/qr_codes_controller.rb:9: syntax error, unexpected keyword_else, expecting ':'
+app/controllers/qr_codes_controller.rb:22: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:39:37 +0100
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ','
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:22: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ','
+app/controllers/qr_codes_controller.rb:22: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.4ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:39:55 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 106ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:40:28 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 98ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:40:36 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<QrCodesController:0x007fe412c95560>
+Did you mean?  @user):
+  
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.5ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:40:56 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.2ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:41:31 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 124ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:41:53 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 104ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:42:05 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 107ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 17:42:35 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 55ms (Views: 34.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit.3" for ::1 at 2016-08-08 17:42:39 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit.3" for ::1 at 2016-08-08 17:44:18 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 17:44:37 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VFUowJGHnc98ZIssJiczJo8TnvBG/HvDHtgbNaDNqYXqa/XOhsQlrXoWSART7LfxVL66+SEemIjQGuVQ6ssoFA==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"0", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"", "locality"=>"", "city"=>"London", "membership_expiry_date"=>"2016-08-18", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: street_address, membership_expiry_date
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", 2016-08-08 16:44:37 UTC], ["user_image", "MeSkiing.png"], ["id", 1]]
+  [1m[35m (71.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 202ms (ActiveRecord: 72.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 17:44:37 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:44:39 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 86ms (Views: 28.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:45:02 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 115ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:45:14 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.1ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.1ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:46:10 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (comparison of String with Date failed):
+  
+app/controllers/qr_codes_controller.rb:7:in `>'
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.0ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:46:27 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 118ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:46:38 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 104ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:47:43 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 111ms (Views: 26.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:47:50 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 107ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:48:33 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:50:32 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.0ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:51:18 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 108ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:51:33 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 101ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 17:53:36 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 87ms (Views: 26.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/conversations" for ::1 at 2016-08-08 17:53:42 +0100
+Processing by ConversationsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering conversations/index.html.erb within layouts/application
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE (sender_id = 1 OR receiver_id = 1)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."conversation_id" = $1 AND (user_id != 1 AND read = 'f')[0m  [["conversation_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 1]]
+  Rendered conversations/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 60ms (Views: 46.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/conversations/2/messages" for ::1 at 2016-08-08 17:53:57 +0100
+Processing by MessagesController#index as HTML
+  Parameters: {"conversation_id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "messages" SET "read" = 't' WHERE "messages"."conversation_id" = $1 AND (user_id != 1 AND read = 'f')[0m  [["conversation_id", 2]]
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered messages/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 50ms (Views: 32.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 17:56:20 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 17:56:30 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:00:27 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 119ms (Views: 42.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 18:01:24 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 18:01:28 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 18:02:10 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vWk0zZ0mo9MHYQVkrKfxcTcJTh/L9FK7E1S9Dr4TCTcDV+nDimUbsQETxkzZbHWm7KRqFqwWsfDdlkNr9BWIpg==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"0", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"", "locality"=>"", "city"=>"London", "membership_expiry_date"=>"2016-08-31", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: street_address, membership_expiry_date
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", 2016-08-08 17:02:10 UTC], ["user_image", "MeSkiing.png"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 18:02:10 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 18:02:14 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 18:02:20 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 18:02:35 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"11bacjHy2aikZjEfcuTcIZnUTb0Edn5fbMajsMmIla5paAd8JrFhyqIU8jcHL1j2QnlptGOUnRSiBF3Vg44UPw==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"0", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"Sibella Rd", "locality"=>"", "city"=>"London", "membership_expiry_date"=>"", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: street_address, membership_expiry_date
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 151ms (Views: 29.7ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 18:02:48 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pu98AL+Cx/QRt8AnhduBi0CzpdyXz8/Oj/OqyL2tA6mA0aEOqMF/lhfFAw/wEAVcmx6B1fAtLIVBMVSt96uCOA==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"0", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"", "locality"=>"", "city"=>"London", "membership_expiry_date"=>"2016-08-31", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: street_address, membership_expiry_date
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", 2016-08-08 17:02:48 UTC], ["user_image", "MeSkiing.png"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 18:02:48 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 18:02:50 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2016-08-08 18:03:03 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 26.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 18:03:06 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 18:03:09 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 18:03:30 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KKXMaic6+a0GFmeHNmmvwqoqlUR9As9DoAHkzinDxYyWmxFkMHlBzwBkpK9DoisVcYexTRrgLAhuwxqrY8VEHQ==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"1", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"", "locality"=>"", "city"=>"London", "membership_expiry_date"=>"", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: street_address, membership_expiry_date
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "accept_comms" = $1, "updated_at" = $2, "user_image" = $3 WHERE "users"."id" = $4[0m  [["accept_comms", true], ["updated_at", 2016-08-08 17:03:30 UTC], ["user_image", "MeSkiing.png"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 18:03:30 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 18:03:32 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 18:03:35 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 18:07:10 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 56ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 18:07:30 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GxGJQaEBaCPswO5aMugzyAO+ZieORQM5Tro+GbBR4PilL1RPtkLQQeqyLXJHI7cf2BNCLumn4HKAeMB8+ldhaQ==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"1", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"Sibella Rd ", "locality"=>"", "city"=>"London", "membership_expiry_date"=>"2016-08-31", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "street_address" = $1, "membership_expiry_date" = $2, "updated_at" = $3, "user_image" = $4 WHERE "users"."id" = $5[0m  [["street_address", "Sibella Rd "], ["membership_expiry_date", Wed, 31 Aug 2016], ["updated_at", 2016-08-08 17:07:30 UTC], ["user_image", "MeSkiing.png"], ["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 18:07:30 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 18:07:32 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:07:35 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+TypeError (no implicit conversion of Date into String):
+  
+app/controllers/qr_codes_controller.rb:7:in `+'
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.7ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:22:15 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+TypeError (no implicit conversion of Date into String):
+  
+app/controllers/qr_codes_controller.rb:7:in `+'
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.8ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:26:59 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.5ms)
+
+
+  
+ArgumentError (comparison of String with Date failed):
+  
+app/controllers/qr_codes_controller.rb:7:in `>'
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:27:12 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (comparison of Date with String failed):
+  
+app/controllers/qr_codes_controller.rb:7:in `>'
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.8ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.6ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:27:45 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 99ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:27:57 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+
+  
+TypeError (no implicit conversion of Date into String):
+  
+app/controllers/qr_codes_controller.rb:7:in `+'
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:28:27 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (comparison of Date with String failed):
+  
+app/controllers/qr_codes_controller.rb:7:in `>'
+app/controllers/qr_codes_controller.rb:7:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.7ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:28:45 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 98ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:29:48 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+RQRCode::QRCodeRunTimeError (code length overflow. (356>288)):
+  
+app/controllers/qr_codes_controller.rb:11:in `new'
+app/controllers/qr_codes_controller.rb:11:in `create'
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.3ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:30:12 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 227ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:32:20 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 134ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:33:59 +0100
+  
+SyntaxError (/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...hip_expiry_date > Date.today? "Valid"+current_user.membershi...
+...                               ^
+/Users/julianwyatt/development/WDI_21_PROJECT_2/app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+...r.membership_expiry_date.to_s : "Expired"
+...                               ^):
+  
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/qr_codes_controller.rb:7: syntax error, unexpected ':', expecting keyword_end
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/julianwyatt/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.7ms)
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:34:24 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 113ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 18:34:37 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/edit.1" for ::1 at 2016-08-08 18:34:41 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/users" for ::1 at 2016-08-08 18:34:52 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZLTnWmO8/ooStRXW0SZrd9Digr5zNyljhIaxOF3/+uPaijpUdP9G6BTH1v6k7e+gC0+mtxTVyihKRE9dF/l7cg==", "user"=>{"email"=>"julian.wyatt@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "first_name"=>"Jules", "last_name"=>"Wyatt", "admin_level"=>"4", "date_of_birth"=>"1967-01-24", "accept_comms"=>"1", "accept_proms"=>"1", "mobile_tel_number"=>"07805574706", "post_code"=>"Sw4 6HX", "house_flat_name_number"=>"6", "street_address"=>"Sibella Rd ", "locality"=>"", "city"=>"London", "membership_expiry_date"=>"2016-08-01", "profile"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "membership_expiry_date" = $1, "updated_at" = $2, "user_image" = $3 WHERE "users"."id" = $4[0m  [["membership_expiry_date", Mon, 01 Aug 2016], ["updated_at", 2016-08-08 17:34:52 UTC], ["user_image", "MeSkiing.png"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 18:34:52 +0100
+Processing by StaticsController#homepage as HTML
+  Rendering statics/homepage.html.erb within layouts/application
+  Rendered statics/homepage.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/qr_codes/create" for ::1 at 2016-08-08 18:34:55 +0100
+Processing by QrCodesController#create as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering qr_codes/create.html.erb within layouts/application
+  Rendered qr_codes/create.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 96ms (Views: 26.2ms | ActiveRecord: 0.7ms)
+
+
