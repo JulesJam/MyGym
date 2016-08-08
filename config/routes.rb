@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'messages/index'
 
-  get 'conversations/index'
+
+ 
 
   root "statics#homepage"
 
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:index, :show]
 
+  #the do block creates a sub route for messages - the messages route is inside the converstaion block 
   resources :conversations, only: [:index, :create] do
   resources :messages, only: [:index, :create]
   end
