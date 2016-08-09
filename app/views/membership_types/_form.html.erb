@@ -1,0 +1,68 @@
+<%= form_for(membership_type) do |f| %>
+  <% if membership_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(membership_type.errors.count, "error") %> prohibited this membership_type from being saved:</h2>
+
+      <ul>
+      <% membership_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_valid_from %>
+    <%= f.date_select :date_valid_from %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_valid_to %>
+    <%= f.date_select :date_valid_to %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %>
+    <%= f.check_box :active %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age_eligibility_lower %>
+    <%= f.number_field :age_eligibility_lower %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age_eligibility_upper %>
+    <%= f.number_field :age_eligibility_upper %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :validity_period %>
+    <%= f.number_field :validity_period %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

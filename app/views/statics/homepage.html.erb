@@ -1,2 +1,31 @@
-<h1>Statics#homepage</h1>
-<p>Find me in app/views/statics/homepage.html.erb</p>
+<body class="home">
+  <div class="shader">
+    <div class="home_container">
+      <h1 class="home_h1"> My Gym </h1>
+      <h2 class="home_h2">Welcome to the Gym<br><br>Opening times</h2>
+
+      <div id="opening_times">
+        <ul>
+          <li>Monday: 7:00am to 10:00pm</li>
+          <li>Tuesday: 7:00am to 10:00pm</li>
+          <li>Wednesday: 7:00am to 10:00pm</li>
+          <li>Thursday: 7:00am to 10:00pm</li>
+          <li>Friday: 7:00am to 9:00pm</li>
+          <li>Saturday: 8:00am to 3:00pm</li>
+          <li>Sunday Closed</li>
+
+        </ul>
+      </div>
+      <div >
+        <%= link_to"SIGN IN", user_session_path, class: "button lrg_button"%>
+      </div>
+      <div class="welcome_bottom_nav">
+        <ul>
+          <li>More Info...</li>
+          <li>Gallery</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

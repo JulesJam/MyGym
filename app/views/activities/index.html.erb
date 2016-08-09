@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= render 'nav_bar' %>
 <h1>Activities</h1>
 
 <table>
@@ -36,9 +36,12 @@
         <td><%= activity.image %></td>
         <td><%= activity.places_taken %></td>
         <td><%= activity.user_id %></td>
+
         <td><%= link_to 'Show', activity %></td>
+        <% if current_user.admin_level > 4%>
         <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
         <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -46,5 +49,7 @@
 
 <br>
 
+<% if current_user.admin_level > 4%> 
+  <%= link_to 'New Activity', new_activity_path %>
+<% end %>
 
-<%= link_to 'New Activity', new_activity_path %>

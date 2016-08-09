@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @membership_type.image %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @membership_type.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @membership_type.description %>
+</p>
+
+<p>
+  <strong>Date valid from:</strong>
+  <%= @membership_type.date_valid_from %>
+</p>
+
+<p>
+  <strong>Date valid to:</strong>
+  <%= @membership_type.date_valid_to %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @membership_type.active %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @membership_type.price %>
+</p>
+
+<p>
+  <strong>Age eligibility lower:</strong>
+  <%= @membership_type.age_eligibility_lower %>
+</p>
+
+<p>
+  <strong>Age eligibility upper:</strong>
+  <%= @membership_type.age_eligibility_upper %>
+</p>
+
+<%= link_to 'Edit', edit_membership_type_path(@membership_type) %> |
+<%= link_to 'Back', membership_types_path %>

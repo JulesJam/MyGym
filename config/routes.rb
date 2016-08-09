@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :membership_fees
+  resources :membership_types
   mount ActionCable.server => '/cable'
 
   resources :qr_codes, only:[:new, :create]

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paid amount:</strong>
+  <%= @membership_fee.paid_amount %>
+</p>
+
+<p>
+  <strong>Paid date:</strong>
+  <%= @membership_fee.paid_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @membership_fee.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_membership_fee_path(@membership_fee) %> |
+<%= link_to 'Back', membership_fees_path %>

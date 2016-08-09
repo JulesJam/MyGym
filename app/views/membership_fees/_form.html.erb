@@ -1,0 +1,32 @@
+<%= form_for(membership_fee) do |f| %>
+  <% if membership_fee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(membership_fee.errors.count, "error") %> prohibited this membership_fee from being saved:</h2>
+
+      <ul>
+      <% membership_fee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :paid_amount %>
+    <%= f.text_field :paid_amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :paid_date %>
+    <%= f.date_select :paid_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

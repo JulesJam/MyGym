@@ -24,6 +24,10 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1/edit
   def edit
+    if current_user.admin_level<5
+      flash[:notice] = 'You do not have the authority to amend this activity.'
+      redirect_to activities_path
+    end
   end
 
   # POST /activities

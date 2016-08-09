@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  title: MyString
+  description: MyText
+  date_valid_from: 2016-08-09
+  date_valid_to: 2016-08-09
+  active: false
+  price: 1.5
+  age_eligibility_lower: 1
+  age_eligibility_upper: 1
+
+two:
+  image: MyString
+  title: MyString
+  description: MyText
+  date_valid_from: 2016-08-09
+  date_valid_to: 2016-08-09
+  active: false
+  price: 1.5
+  age_eligibility_lower: 1
+  age_eligibility_upper: 1
