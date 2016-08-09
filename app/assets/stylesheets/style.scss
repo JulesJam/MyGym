@@ -5,8 +5,15 @@ body{
 
 
 .home{
-  background-image: url('homepagebackground.png');
+  background-image: url('homepagebackground.png') ;
   background-size: cover;
+ 
+}
+.shader{
+  width:100%;
+  top:0;
+  left:0;
+  background-color:rgba(207, 244, 252, .25);
   display: flex;
   justify-content: center;
   align: center;
@@ -31,7 +38,8 @@ body{
 }
 
 .home_h2{
-  font-size: 4em;
+  font-size: 30px;
+  color:rgba(248, 247, 248, 1.0);
 }
 
 #opening_times{
