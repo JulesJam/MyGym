@@ -65,6 +65,7 @@
 <%= link_to activity_book_path, method: :post do %>
   Book <strong><%= @activity.activity_name %>&nbsp<%= @activity.date %>&nbsp<%= @activity.start_time %>
 <% end%>
+<%= link_to 'Cancel This Activity', activity_cancel_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>
 

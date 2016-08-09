@@ -68,15 +68,19 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def cancel
+    activity = Activity.find(params[:id])
+    current_user.activities_attending.delete(activity) if activity
+    flash[:notice] = 'Event was cancelled.'
+    redirect_to activities_attending_path
+  end
+
   def book
     activity = Activity.find(params[:id])
     current_user.activities_attending << activity
-    redirect_to activities_path
     flash[:notice] = 'Event was saved.'
+    redirect_to activities_path
   end
-
-
- 
 
 
   private

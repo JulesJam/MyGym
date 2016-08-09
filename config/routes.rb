@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  mount ActionCable.server => '/cable'
 
   resources :qr_codes, only:[:new, :create]
  
@@ -10,10 +10,11 @@ Rails.application.routes.draw do
 
   get 'activities_attending', to: "activities#activities_attending"
 
-
   root "statics#homepage"
 
   post "activities/:id/book", to:"activities#book", as: :activity_book
+  delete 'activities/:id/cancel', to: "activities#cancel", as: :activity_cancel
+  
   resources :activities
 
   devise_for :users
