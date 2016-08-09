@@ -6,6 +6,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="../scripts/crafty_postcode.class.js"></script>
+    <script src="../scripts/main.js"></script>
   </head>
 
   <body>
@@ -14,7 +16,8 @@
         <ul class="nav navbar-nav">
          <% if current_user %>
           <li class="nav-item">Current User...<%= current_user.email %>&nbspUser Id...<%=current_user.id%></li>
-          <li class="nav-item"><%= link_to"Classes", activities_path %></li>
+          <li class="nav-item"><%= link_to"All Classes", activities_path %></li>
+          <li class="nav-item"><%= link_to"My Classes", activities_attending_path %></li>
           <li class="nav-item"><%= link_to"Membership Card", qr_codes_create_path %></li>
           <li class="nav-item"><%= link_to"Message", conversations_path %></li>
          <li class="nav-item"><%= link_to"User List",users_path%></li>

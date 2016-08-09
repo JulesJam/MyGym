@@ -7,8 +7,9 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
-  def booked
-
+  def activities_attending
+    @activities_attending = current_user.activities_attending
+  
   end
 
   # GET /activities/1

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   get 'qr_codes/create'
 
+  get 'activities_attending', to: "activities#activities_attending"
+
+
   root "statics#homepage"
 
   post "activities/:id/book", to:"activities#book", as: :activity_book
