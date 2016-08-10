@@ -221,6 +221,87 @@ a,.centered_back_link{
 
 }
 
+.message_board{
+ 
+  width:350px;
+  height: 100vh;
+  margin:0 auto;
+  padding:10px;
+  font-size: 14px;
+  color:rgba(107, 144, 151, 1.0);
+  background: #6db3f2; 
+  background: -moz-linear-gradient(top,  #6db3f2 0%, #54a3ee 35%, #1e69de 100%);
+  background: -webkit-linear-gradient(top,  #6db3f2 0%,#54a3ee 35%,#1e69de 100%);
+  background: linear-gradient(to bottom,  #6db3f2 0%,#54a3ee 35%,#1e69de 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 );
+
+
+}
+
+.message_me{
+  float:left;
+  clear:right;
+  color:#f2f2f2;
+  font-size: 12px;
+  max-width:200px;
+  background-color:rgba(7, 86, 152, .8);
+  -moz-border-radius:10px;
+  border-radius:10px;
+  box-shadow: 5px 5px 5px rgba(87, 119, 126, .6);
+  margin-bottom:10px;
+
+
+}
+
+.message_sender{
+  float:right;
+  clear:left;
+  max-width:200px;
+  color:#f2f2f2;
+  font-size: 12px;
+  background-color:rgba(189, 69, 42, 1.0);
+  -moz-border-radius:10px;
+  border-radius:10px;
+  margin-bottom:10px;
+  box-shadow: -5px 5px 5px rgba(87, 119, 126, .6);
+
+
+}
+
+
+
+.mail_button_lozenge{
+  float:right;
+  width:60px;
+  background-color:#f3f7fc;
+  color:rgba(69, 109, 136, 1.0);
+  border-radius:30%;
+  margin: 5px 0 0 10px;
+
+}
+
+.messages_title{
+  display:block;
+  width:200px;
+  float:left;
+
+}
+
+.message_close{
+  float:right;
+  color:#f1f1f1;
+}
+
+.message_title_left{
+  padding:5px;
+  text-align: left;
+}
+
+.message_title_right{
+  padding:5px;
+  text-align: right;
+}
+
 
 
 
