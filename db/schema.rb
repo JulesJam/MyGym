@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809105313) do
+ActiveRecord::Schema.define(version: 20160810162802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 20160809105313) do
     t.integer "activity_id", null: false
   end
 
+  create_table "activity_records", force: :cascade do |t|
+    t.integer  "activity_id"
+    t.string   "type"
+    t.string   "date"
+    t.string   "status"
+    t.string   "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
     t.integer  "receiver_id"
@@ -63,9 +73,9 @@ ActiveRecord::Schema.define(version: 20160809105313) do
     t.float    "price"
     t.integer  "age_eligibility_lower"
     t.integer  "age_eligibility_upper"
+    t.integer  "validity_period"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
-    t.integer  "validity_period"
   end
 
   create_table "messages", force: :cascade do |t|

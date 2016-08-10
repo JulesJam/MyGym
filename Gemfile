@@ -1,8 +1,13 @@
 source 'https://rubygems.org'
 
-
+gem 'bootstrap', '~> 4.0.0.alpha3.1' 
+source 'https://rails-assets.org' do     
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+gem 'rmagick'
 gem 'rqrcode-with-patches', '~> 0.5.4'
 gem 'carrierwave', '0.10.0'
+gem 'fog', require: 'fog/aws'
 gem 'ideal_postcodes'
 gem 'devise', '~> 4.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

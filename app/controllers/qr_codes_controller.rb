@@ -7,7 +7,7 @@ class QrCodesController < ApplicationController
     @expiry = current_user.membership_expiry_date.present? &&  current_user.membership_expiry_date > Date.today ? "Valid"+current_user.membership_expiry_date.to_s : "Expired"
    
     
-    qrText= current_user.first_name+" "+current_user.last_name+"Membership Valid Until"+current_user.membership_expiry_date.to_s
+    qrText= current_user.first_name+" "+current_user.last_name+"Valid Until"+current_user.membership_expiry_date.to_s
     @qr = RQRCode::QRCode.new( qrText, size: 5)
   end
 

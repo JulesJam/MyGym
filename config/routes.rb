@@ -1,16 +1,21 @@
 Rails.application.routes.draw do
+  resources :activity_records
   resources :membership_fees
   resources :membership_types
   mount ActionCable.server => '/cable'
 
   resources :qr_codes, only:[:new, :create]
- 
+  devise_for  :users, controllers: { registrations: :registrations }
 
   get 'qr_codes/new'
 
   get 'qr_codes/create'
 
   get 'activities_attending', to: "activities#activities_attending"
+  
+  post 'create_activity_record', to: "activity_records#create_activity_record", as: :create_activity_record
+  get 'menu', to: "users#menu"
+
 
   root "statics#homepage"
 
@@ -19,7 +24,7 @@ Rails.application.routes.draw do
   
   resources :activities
 
-  devise_for :users
+
   resources :users, only: [:index, :show]
 
   #the do block creates a sub route for messages - the messages route is inside the converstaion block 
@@ -30,4 +35,5 @@ Rails.application.routes.draw do
   get "home", to: "statics#homepage"
   get "about", to: "statics#about"
   get "contact_us", to:"statics#contact_us"
+
 end

@@ -1,49 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Activities</h1>
+<h1>Your Activities</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Activity name</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Start time</th>
-      <th>Duration</th>
-      <th>Number of places</th>
-      <th>Status</th>
-      <th>Active</th>
-      <th>Image</th>
-      <th>Places taken</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @activities_attending.each do |activity| %>
-      <tr>
-        <td><%= activity.activity_name %></td>
-        <td><%= activity.description %></td>
-        <td><%= activity.location %></td>
-        <td><%= activity.date %></td>
-        <td><%= activity.start_time %></td>
-        <td><%= activity.duration %></td>
-        <td><%= activity.number_of_places %></td>
-        <td><%= activity.status %></td>
-        <td><%= activity.active %></td>
-        <td><%= activity.image %></td>
-        <td><%= activity.places_taken %></td>
-        <td><%= activity.user_id %></td>
-        <td><%= link_to 'Show', activity %></td>
-        
-     
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'Back', activities_path %>
+<% @activities_attending.each do |activity| %>
+  <div class="card card-outline-primary text-xs-center">
+    <div class="card-block">
+      <div class="card-user-thumb">
+        <%= activity.image %> 
+      </div>
+       <h4> <%= activity.activity_name %></h4>
+       <h5><%= activity.location %></h5>
+       <p> <%= activity.description %></p>
+          <blockquote class="card-blockquote">
+            Date: <%= activity.date %> &nbspStart Time: <%activity.start_time %>&nbspDuration:<%= activity.duration %>&nbsp<% places_available = activity.number_of_places.to_i - activity.places_taken.to_i%><%= places_available%>Creator First Name
+          </blockquote>
+          <div class="card_bottom_nav">
+          
+          <%= link_to 'View this activity', activity %>&nbsp|&nbsp
+          <%= link_to 'Cancel this activity', activity %>
+          </div>
+        </div>
+      </div>
+<% end %>
+<div class="centered_back_link">
+  <%= link_to 'Back', menu_path %>&nbsp|&nbsp
+  <%= link_to 'Choose a new activity', activities_path %>
+</div>

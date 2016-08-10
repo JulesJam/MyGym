@@ -1,19 +1,27 @@
-<h1><%=@user.first_name%>&nbsp<%=@user.last_name%><h1>
-<div class="membership_image"><%= image_tag @user.user_image, width:100 %></div>
-<table class="qr-code">
-<% @qr.modules.each_index do |x| %>
-  <tr>
-  <% @qr.modules.each_index do |y| %>
-   <% if @qr.dark?(x,y) %>
-    <td class="black"/>
-   <% else %>
-    <td class="white"/>
-   <% end %>
-  <% end %>
-  </tr>
-<% end %>
-</table>
-<br />
-<%= @expiry %>
+<div class="membership_card">
+  <h1 class="membership_card"><%=@user.first_name%>&nbsp<%=@user.last_name%></h1>
+    <div ><%= image_tag @user.user_image, width:300 %></div>
+      <%=link_to "MENU", menu_path, class: "membership_link_to_menu"%>
+      <%if  @expiry =="Expired"%>
+      <br>
+      <img class="membership_expired" src="../images/no_entry.png" alt="Card image cap">
+      <%else%>
+       <table class="qr-code">
+         <% @qr.modules.each_index do |x| %>
+         <tr>
+         <% @qr.modules.each_index do |y| %>
+         <% if @qr.dark?(x,y) %>
+         <td class="black"/>
+         <% else %>
+         <td class="white"/>
+         <% end %>
+         <% end %>
+         </tr>
+         <% end %>
+       </table>
+      <%end%>
+    <br />
+  <%= @expiry %>&nbsp <%= link_to "VISIT", create_activity_record_path, method: :post%>
+</div>
 
 

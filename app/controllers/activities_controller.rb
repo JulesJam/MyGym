@@ -9,6 +9,7 @@ class ActivitiesController < ApplicationController
 
   def activities_attending
     @activities_attending = current_user.activities_attending
+    @user=User.all
   
   end
 
@@ -24,7 +25,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1/edit
   def edit
-    if current_user.admin_level<5
+    if current_user.admin_level<3
       flash[:notice] = 'You do not have the authority to amend this activity.'
       redirect_to activities_path
     end
@@ -46,6 +47,7 @@ class ActivitiesController < ApplicationController
         format.json { render json: @activity.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to menu_path
   end
 
   # PATCH/PUT /activities/1

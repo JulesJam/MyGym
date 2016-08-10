@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_and_belongs_to_many :activities_attending, class_name: "Activity", join_table: "activities_users"
   after_initialize :set_default
 
+  has_many :activity_records, through: :activities
+
   mount_uploader :user_image, UserImageUploader
 
   def set_default

@@ -12,58 +12,59 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :activity_name %>
+    <%= f.label :activity_name %><br>
     <%= f.text_field :activity_name %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
+    <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
 
   <div class="field">
-    <%= f.label :location %>
+    <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
 
   <div class="field">
-    <%= f.label :date %>
+    <%= f.label :date %><br>
     <%= f.date_select :date %>
   </div>
 
   <div class="field">
-    <%= f.label :start_time %>
-    <%= f.time_select :start_time %>
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time, :default =>Time.now %>
   </div>
 
   <div class="field">
-    <%= f.label :duration %>
-    <%= f.time_select :duration %>
+    <%= f.label :duration %><br>
+    <%= f.time_select :duration, :default => {:hour => '00', :minute => '50'}%>
   </div>
 
   <div class="field">
-    <%= f.label :number_of_places %>
+    <%= f.label :number_of_places %><br>
     <%= f.number_field :number_of_places %>
   </div>
 
   <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%= f.label :status %><br>
+    <%= f.select :status, [["Open For Booking",1], ["Full",2], ["Cancelled",3],["Attended",4]] %>
+    
   </div>
 
   <div class="field">
-    <%= f.label :active %>
-    <%= f.check_box :active %>
+    <%= f.label :active %><br>
+    <%= f.check_box :active, :checked => true %>
   </div>
 
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :image %><br>
     <%= f.text_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :places_taken %>
-    <%= f.number_field :places_taken %>
+    <%= f.label :places_taken %><br>
+    <%= f.number_field :places_taken, :value => 0 %>
   </div>
 
  

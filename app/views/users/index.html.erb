@@ -2,45 +2,23 @@
 
 <h1>Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>username</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Admin Level</th>
-      <th>Date Of birth</th>
-      <th>Mobile Tel</th>
-      <th>Accept Texts</th>
-      <th>Membership Expiry Date</th>
-      <th>Number of Visits</th>
 
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= image_tag user.user_image, width:50 %></td>
-        <td><%= user.id %></td>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.admin_level%></td>
-        <td><%= user.date_of_birth %></td>
-        <td><%= user.mobile_tel_number %></td>
-        <td><%= user.accept_texts %></td>
-        <td><%= user.membership_expiry_date%></td>
-        <td><%= user.total_visits %></td>
-        <td><%= link_to 'Show', user_path(user) %></td>
-        <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
-        <td><%= link_to 'Destroy', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="card card-outline-primary text-xs-center">
+      <div class="card-block">
+        <div class="card-user-thumb">
+          <%= image_tag user.user_image, width:50 %>
+        </div>
+        <blockquote class="card-blockquote">
+          Membership No.<%= user.id %>&nbsp Name:<%= user.first_name %>&nbsp<%= user.last_name %><br>
+          Role:&nbsp<%= user.admin_level%>&nbsp Contact Number&nbsp<%= user.mobile_tel_number %>
+        </blockquote>
+        <div class="card_bottom_nav">
+        <%= link_to 'Show', user_path(user) %>
+        <%= link_to 'Edit', edit_user_registration_path %>
+        </div>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Activity', new_activity_path %>
+    <%= link_to 'Back To Menu', menu_path, class: "centered_back_link" %>

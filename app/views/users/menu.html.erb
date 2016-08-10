@@ -1,0 +1,70 @@
+<% if current_user.admin_level > 1 %>
+  <%= render 'partials/nav_bar' %>
+<% end %>
+
+<div class="stats_block">
+  <ul>
+    <li>Visits This Month</li>
+    <li>Visits Last Month</li>
+    <li>Visits This Year</li>
+    <li>Classes Booked</li>
+  </ul>
+</div>
+<div class="reminder">
+</div>
+<div class="user_indicator">Welcome Back&nbsp<%= current_user.first_name %><br><%= current_user.admin_level%><br> <%=link_to"Update Your Details", edit_user_registration_path%><br><%=link_to"SIGN OUT",destroy_user_session_path, class:"nav-link", method: :delete%>
+</div>
+<div class="menu_icons">
+<div class="container">
+  <div class="card-group">
+    <div class="card">
+      <%=link_to qr_codes_create_path do%>
+        <img class="card-img" src="images/dummy_qr_code.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Membership<br>Card</h4>
+        </div>
+      <% end %>
+    </div>
+    <div class="card">
+      <%=link_to activities_attending_path do%>
+        <img class="card-img" src="images/placeholder.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">My classes</h4>
+          </div>
+      <%end%>
+    </div>
+    <div class="card">
+      
+       <img class="card-img" src="images/placeholder.png" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">My Routines</h4>
+        </div>
+      
+    </div>
+  </div>
+  <div class="card-group">
+
+    <div class="card">
+      <%=link_to conversations_path do%>
+        <img class="card-img" src="images/placeholder.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">My Messages</h4>
+          </div>
+        <%end%>
+      </div>
+    <div class="card">
+      <img class="card-img" src="images/placeholder.png" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Gallery</h4>
+        </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="images/placeholder.png" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">News</h4>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
