@@ -1,8 +1,9 @@
 <div class="message_board">
-  <h2 class="messages_title">Messages</h2>
-  <%= link_to 'Inbox', conversations_path, class: "message_close" %>
-   <%= form_for [@conversation, @message] do |f| %>
-    <div class="field">
+  <div class="message_container">
+    <h2 class="messages_title">Messages</h2>
+      <%= link_to 'Inbox', conversations_path, class: "message_close" %>
+      <%= form_for [@conversation, @message] do |f| %>
+    <div class="field message_area" >
       <%= f.text_area :body, placeholder: "Your message", cols: 35 %>
     </div>
 
@@ -28,7 +29,6 @@
         </li>
       <% end %>
     <% end %>
-  </ul>
-
-
+    </ul>
+  </div>
 </div>

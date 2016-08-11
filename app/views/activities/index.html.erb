@@ -17,11 +17,12 @@
         <h5><%= activity.location %></h5>
         <p> <%= activity.description %></p>
           <blockquote class="card-blockquote">
-               Date: <%= activity.date %> &nbspStart Time: <%=   activity.start_time %>&nbspDuration:<%= activity.duration %> Places Available: <%= activity.places_available%>&nbspThis activity is being run by: <%=activity.creator.first_name%><br><%= activity.status %>
+               Date: <%= activity.date %> &nbspStart Time: <%= activity.start_time.strftime("%H:%M:%S") %>&nbspDuration:<%= activity.duration.strftime("%H:%M:%S") %> Places Available: <%= activity.places_available%>&nbspThis activity is being run by: <%=activity.creator.first_name%><br><%= activity.status %>
           </blockquote>
 
         <% if current_user.admin_level >1 %>
           <ul>
+            <div class=attendee_list></div>
             <% activity.attendees.each do |user| %>
               <li><%= user.full_name %>
             <% end %>

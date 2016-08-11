@@ -2,17 +2,18 @@
   <%= render 'partials/nav_bar' %>
 <% end %>
 
+
 <div class="stats_block">
   <ul>
     <li>Visits This Month</li>
     <li>Visits Last Month</li>
-    <li>Visits This Year</li>
-    <li>Classes Booked</li>
+    <li>Total Visits <%=current_user.total_visits%> <%=current_user.encouragement_icon_total(current_user)%></li>
+    <li>Classes Booked <%=current_user.activities_attending.size%> <%=current_user.encouragement_icon_classes(current_user.activities_attending.size)%></li>
   </ul>
 </div>
 <div class="reminder">
 </div>
-<div class="user_indicator">Welcome Back&nbsp<%= current_user.first_name %><br><%= current_user.admin_level%><br> <%=link_to"Update Your Details", edit_user_registration_path%><br><%=link_to"SIGN OUT",destroy_user_session_path, class:"nav-link", method: :delete%>
+<div class="user_indicator">Welcome Back&nbsp<%= current_user.first_name %><br><%= current_user.member_type(current_user)%><br> <%=link_to"Update Your Details", edit_user_registration_path%><br><%=link_to"SIGN OUT",destroy_user_session_path, class:"nav-link", method: :delete%>
 </div>
 <div class="menu_icons">
 <div class="container">

@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :location %><br>
-    <%=  f.select :status, [["Gym Floor",1], ["Studio 1",2], ["Yoga Studio",3],["Spin Room",4],["Pool",5]] %>
+    <%=  f.select :location, [["Gym Floor","Gym Floor"], ["Studio 1","Studio 1"], ["Yoga Studio","Yoga Studio"],["Spin Room","Spin Room"],["Pool","Pool"]] %>
   </div>
 
   <div class="field">
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= f.label :start_time %><br>
-    <%= f.time_select :start_time, :default =>Time.now %>
+    <%= f.time_select :start_time%>
   </div>
 
   <div class="field">
@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.select :status, [["Open For Booking",1], ["Full",2], ["Cancelled",3],["Attended",4]] %>
+    <%= f.select :status, [["Open For Booking","Open For Booking"], ["Full","Full"], ["Cancelled","Cancelled"],["Attended","Attended"]] %>
     
   </div>
 
@@ -60,11 +60,6 @@
   <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
-  </div>
-
-  <div class="field">
-    <%= f.label :places_taken %><br>
-    <%= f.number_field :places_taken, :value => 0 %>
   </div>
 
  

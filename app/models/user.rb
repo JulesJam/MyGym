@@ -23,6 +23,45 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  def member_type (current_user)
+     
+    case current_user.admin_level
+    when 1
+      "Member"
+    when 2
+      "Personal Trainer"
+    when 3
+      "Admin User"
+    when 4
+      "Super User"
+    end
+  end
+
+  def encouragement_icon_total (current_user)
+
+    if current_user.total_visits = 0
+      "😡"
+    elsif current_user.total_visits > 3
+      "🤔"
+    elsif current_user.total_visits > 8
+      "😊"
+    elsif current_user.total_visits > 10
+      "😘"
+    end
+  end
+
+  def encouragement_icon_classes (classes)
+
+    if classes = 0
+      "😡"
+    elsif classes >3
+      "🤔"
+    elsif classes > 8
+      "😊"
+    elsif classes > 10
+      "😘"
+    end
+  end
 
   
 end

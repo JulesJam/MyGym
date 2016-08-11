@@ -29,7 +29,7 @@ p{
 }
 
 .home_container{
-  margin:0 auto;
+  margin: 20px auto;
   width:600px;
   color:rgba(248, 247, 248, 1.0);
   text-align: center;
@@ -42,9 +42,6 @@ p{
 }
 
 
-.home_container, .sign_in{
-  margin-top:20%
-}
 
 .home_h1{
   font-size:5em;
@@ -140,6 +137,22 @@ li,.nav-item{
   font-size:30px;
 }
 
+.attendee_list{
+  display: block;
+  width:300px;
+  border-bottom:solid 2px black;
+  margin:0 auto;
+
+}
+
+.message_container{
+  display: block;
+  width:500px;
+  margin: 0 auto;
+
+
+}
+
 
 
 
@@ -190,6 +203,12 @@ li,.nav-item{
   margin: 15px auto;
 }
 
+#qrcontainer{
+  display:block;
+  margin:5px auto;
+  
+}
+
 .card{
   margin: 5px;
   background-color: rgba(185, 203, 195, 1.0);
@@ -228,7 +247,7 @@ li,.nav-item{
   font-size:30px;
   font-family: 'american typewriter', 'sans-serif';
   background-color:rgba(142, 175, 203, 1.0);
-  
+  color:rgba(248, 247, 248, 1.0);
   border-radius:2px;
 }
 
@@ -259,6 +278,39 @@ a,.centered_back_link{
   font-size: 20px;
   color:rgba(248, 247, 248, 1.0);
 
+}
+
+.show_card_wide{
+  background-color:rgba(185, 203, 195, 1.0);
+  width:600px;
+  margin:0 auto;
+  padding:10px;
+  font-size: 20px;
+  color:rgba(248, 247, 248, 1.0);
+
+}
+.user_contact_card{
+  display:block;
+  width:580px;
+  border:solid 1px black;
+}
+
+.user_contact_details{
+  display:block;
+  float:left;
+  width:290px;
+}
+
+.user_address_details{
+  display:block;
+  float:right;
+  width:290px;
+}
+
+.user_details{
+  color:rgba(248, 247, 248, 1.0);
+  font-size:12px;
+  line-height:1.2;
 }
 
 .message_board{
@@ -316,7 +368,7 @@ a,.centered_back_link{
   background-color: none;
   border-radius:5px;
   color:rgba(69, 109, 136, 1.0);
- 
+  
   margin: 5px auto;
 
 }
@@ -371,6 +423,12 @@ a,.centered_back_link{
   background-color:rgba(142, 175, 203, 1.0) !important;
 }
 
+.field.message_area{
+  display:block;
+  width:200px;
+  margin: 0 auto;
+}
+
 
 @media(max-width:900px) {
     #nav3.navbar .navbar-brand {
@@ -386,6 +444,15 @@ a,.centered_back_link{
     }
 }
 
+@media(max-width:350px) {
+  .message_container{
+    display: block;
+    width:350px;
+    margin: 0 auto;
+
+
+  }
+}
 
 
 

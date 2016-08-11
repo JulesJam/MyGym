@@ -6,8 +6,8 @@
   </p>
   <% if current_user.admin_level <2 %>
     <p>
-      <strong>Image:</strong>
-      <%= @activity.image %>
+      
+      <%=image_tag @activity.image %>
     </p>
   <% end %>
   
@@ -19,6 +19,7 @@
   
   <p>
     <strong>Location:</strong>
+    
     <%= @activity.location %>
   </p>
   
@@ -29,12 +30,12 @@
   
   <p>
     <strong>Start time:</strong>
-    <%= @activity.start_time %>
+    <%= @activity.start_time.strftime("%H:%M:%S")%>
   </p>
   
   <p>
     <strong>Duration:</strong>
-    <%= @activity.duration %>
+    <%= @activity.duration.strftime("%H:%M:%S") %>
   </p>
   
   <p>

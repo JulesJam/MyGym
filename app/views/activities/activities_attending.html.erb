@@ -17,7 +17,7 @@
        <h5><%= activity.location %></h5>
        <p> <%= activity.description %></p>
           <blockquote class="card-blockquote">
-            Date: <%= activity.date %> &nbspStart Time: <%activity.start_time %>&nbspDuration:<%= activity.duration %>&nbspAvailable Places: <% places_available = activity.number_of_places.to_i - activity.places_taken.to_i%><%= places_available%><%=activity.creator.first_name%>
+            Date: <%= activity.date %> &nbspStart Time: <%activity.start_time.strftime("%H:%M:%S") %>&nbspDuration:<%= activity.duration.strftime("%H:%M:%S") %>&nbspAvailable Places: <% places_available = activity.number_of_places.to_i - activity.places_taken.to_i%><%= places_available%> This activity is being run by <%=activity.creator.first_name%>
           </blockquote>
           <div class="card_bottom_nav">
           

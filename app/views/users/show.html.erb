@@ -1,2 +1,46 @@
-<h1>Details for <%= @user.id%></h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+<div class="show_card_wide">
+  <p>
+    <strong>User:</strong>
+    <%= @user.username %><br>
+    Mobile Number:<%=@user.mobile_tel_number%><br>
+    <%=@user.admin_level%>
+  </p>
+  
+  <p>
+    <%=image_tag @user.image %>
+  </p>
+
+ <div class="user_contact_card"> 
+  <div class="user_contact_details">
+    <ul>
+      <li class="user_details">First Name: <%=@user.first_name%></li>
+      <li class="user_details">Last Name: <%=@user.last_name%></li>
+      <li class="user_details">Date Of Birth:<%=@user.date_of_birth%> </li>
+      <li class="user_details">Accepts Comms: <%@user.accept_comms%></li>
+      <li class="user_details">Accept Proms:<%=@user.accept_proms%></li>
+      <li class="user_details">Accept Texts:<%@user.accept_texts%></li>
+      <li class="user_details">Other Contcat Number:<%=@user.other_tel_number%></li>
+    </ul>
+  </div>
+  <div class="user_address_details">
+  <ul>
+      <li class="user_details">First Name: <%=@user.first_name%></li>
+      <li class="user_details">Last Name: <%=@user.last_name%></li>
+      <li class="user_details">Date Of Birth:<%=@user.date_of_birth%> </li>
+      <li class="user_details">Accepts Comms: <%@user.accept_comms%></li>
+      <li class="user_details">Accept Proms:<%=@user.accept_proms%></li>
+      <li class="user_details">Accept Texts:<%@user.accept_texts%></li>
+      <li class="user_details">Other Contcat Number:<%=@user.other_tel_number%></li>
+  </ul>
+  </div>
+  
+  
+
+<div class="centered_back_link">
+   <%= link_to 'Edit', edit_user_registration_path(@user) %> 
+
+  <%= link_to 'Back', users_path%>
+</div>
+
+

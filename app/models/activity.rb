@@ -14,4 +14,10 @@ class Activity < ApplicationRecord
   def places_available
     number_of_places - places_taken
   end
+
+    
+ 
+
+
+
 end

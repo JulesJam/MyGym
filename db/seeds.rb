@@ -104,34 +104,35 @@ User.create!([
   membership_type_id: 1,
 
   },
-
-
-
   {
-  username:"mickyg",
-  email: "mike.hayden@ga.co",
+  username:"Janey123",
+  email: "jane@mail",
   password: "password",
-  password_confirmation:"password"
-
+  password_confirmation:"password",
+  first_name:"Jane",
+  last_name:"Doe",
+  admin_level:2,
+  date_of_birth: Date.new(1972,8,11),
+  image:File.open(Rails.root.join "db/seeds_images/carlos.jpg"),
+  accept_comms:true,
+  accept_proms:true,
+  mobile_tel_number:"0766478494",
+  accept_texts: true,
+  
+  post_code:"N1 1BD",
+  house_flat_name_number:"Flat 3 The Flats",
+  street_address:"Somewhere In North London",
+  locality:"Walthamstow",
+  city:"London",
+  last_visit_date: Date.new(2016,8,10),
+  total_visits: 11,
+  membership_expiry_date: Date.new(2017,1,1),
+  membership_type_id: 1,
 
   },
-  {
-    username:"jasonlai",
-    email: "jason.lai@ga.co",
-    password: "password",
-    password_confirmation:"password"
-    
-    
-  },
-  {
-    username:"toni",
-    email: "toni@ga.co",
-    password: "password",
-    password_confirmation:"password"
-    
 
-      
-  }])
+
+])
 
 Activity.create!([
   { activity_name:"Personal Training",
