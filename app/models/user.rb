@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   has_many :activity_records, through: :activities
 
-  mount_uploader :user_image, UserImageUploader
+  mount_uploader :image, UserImageUploader
 
   def set_default
     self.admin_level ||= 4
