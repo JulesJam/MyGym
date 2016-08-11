@@ -2,16 +2,7 @@
 <div class="message_board">
   <h2 class="messages_title">Inbox</h2>
   <%= link_to 'Menu', menu_path, class: "message_close" %>
-  <ul>
-   <% @conversations.each do |conversation| %>
-      <li data-conversation-id="<%= conversation.id %>">
-        <%= link_to conversation.recipient(current_user).username, conversation_messages_path(conversation) %>
-       <% if !conversation.unread_message_count(current_user).zero?  %>
-        (<%= conversation.unread_message_count(current_user) %>)
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+
 
 <div class="col-md-12">
     <div class="row">
@@ -20,13 +11,27 @@
           <input id="search" placeholder="Search" class="form-control">
         </div>
       </div>
-      <div class="col-md-2">
+
+      <div >
         <button id="sort" type="button" class="mail_button_lozenge">ASC</button>
+      </div>
+      <div class="active_messages_container">
+        <ul>
+         <% @conversations.each do |conversation| %>
+          <li id="active_messages">
+            <% if !conversation.unread_message_count(current_user).zero?  %>
+            <%= link_to conversation.recipient(current_user).username, conversation_messages_path(conversation) %>
+        
+            (<%= conversation.unread_message_count(current_user) %>)
+            <% end %>
+          </li>
+         <% end %>
+        </ul>
       </div>
     </div>
     <ul id="users" class="list-group">
       <% @users.each do |user| %>
-        <li class="list-group-item" data-searchstring="<%= user.username %> <%= user.first_name %>">
+        <li class="messages_list" data-searchstring="<%= user.username %> <%= user.first_name %>">
           <%= link_to user.username, conversations_path(sender_id: current_user.id, receiver_id: user.id), method: :post %>
         </li>
       <% end %>

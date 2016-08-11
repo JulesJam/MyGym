@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%=  f.select :status, [["Gym Floor",1], ["Studio 1",2], ["Yoga Studio",3],["Spin Room",4],["Pool",5]] %>
   </div>
 
   <div class="field">
@@ -59,7 +59,7 @@
 
   <div class="field">
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
   </div>
 
   <div class="field">

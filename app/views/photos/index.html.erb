@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photos</h1>
+<div class="centered_back_link">
+  <%= link_to 'New Photo', new_photo_path %> | 
+  <%= link_to 'Menu', menu_path %>
+</div>
+
+
+
+<% @photos.each do |photo| %>
+   <div class="card card-outline-primary text-xs-center">
+     <div class="card-block">
+       <div class="card-user-thumb">
+         <%= image_tag photo.image %> 
+       </div>
+        <h4> <%= photo.title %></h4>
+<!--         <h5><%#= photo.user.first_name %></h5>
+ -->        <p> <%= photo.description %></p>   
+        <div class="card_bottom_nav">
+          <%= link_to 'View', photo %>
+          <% if current_user.admin_level > 1%>
+          &nbsp|&nbsp
+          <%= link_to 'Edit', edit_photo_path(photo) %>
+          <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
+
+
+

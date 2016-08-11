@@ -1,5 +1,6 @@
 class ActivityRecordsController < ApplicationController
   before_action :set_activity_record, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /activity_records
   # GET /activity_records.json

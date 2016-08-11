@@ -2,37 +2,50 @@
 
 <h1>Membership Types</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Date valid from</th>
-      <th>Date valid to</th>
-      <th>Active</th>
-      <th>Price</th>
-      <th>Age eligibility lower</th>
-      <th>Age eligibility upper</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= render "partials/back_links"%>
 
-  <tbody>
-    <% @membership_types.each do |membership_type| %>
+ 
+  <% @membership_types.each do |membership_type| %>
+    <div class="card card-outline-primary text-xs-center">
+      <div class="card-block">
+        <div class="card-user-thumb">
+          <%= image_tag membership_type.image %> 
+        </div>
+        <h4> <%= membership_type.title %></h4>
+        <ul>
+          <li><%= membership_type.description %></li>
+          <li><%= membership_type.date_valid_from %></li>
+          <li><%= membership_type.date_valid_to %></li>
+          <li><%= membership_type.active %></li>
+          <li><%= membership_type.price %></li>
+          <li><%= membership_type.age_eligibility_lower %></li>
+          <li><%= membership_type.age_eligibility_upper %></li>
+          <%end%>
+        </ul>
+        <div class="card_bottom_nav">
+        <%= link_to 'View', membership_type %>
+        <% if current_user.admin_level > 1%>&nbsp|&nbsp
+        <%= link_to 'Edit', edit_membership_type_path(membership_type) %>
+        <% end %>
+      </div>
+    </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
       <tr>
-        <td><%= membership_type.image %></td>
-        <td><%= membership_type.title %></td>
-        <td><%= membership_type.description %></td>
-        <td><%= membership_type.date_valid_from %></td>
-        <td><%= membership_type.date_valid_to %></td>
-        <td><%= membership_type.active %></td>
-        <td><%= membership_type.price %></td>
-        <td><%= membership_type.age_eligibility_lower %></td>
-        <td><%= membership_type.age_eligibility_upper %></td>
-        <td><%= link_to 'Show', membership_type %></td>
-        <td><%= link_to 'Edit', edit_membership_type_path(membership_type) %></td>
-        <td><%= link_to 'Destroy', membership_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
+       
       </tr>
     <% end %>
   </tbody>

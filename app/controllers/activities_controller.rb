@@ -44,14 +44,13 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
+        format.html { redirect_to menu_path, notice: 'Activity was successfully created.' }
         format.json { render :show, status: :created, location: @activity }
       else
         format.html { render :new }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
       end
     end
-    redirect_to menu_path
   end
 
   # PATCH/PUT /activities/1

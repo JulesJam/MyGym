@@ -4,11 +4,12 @@
     <strong>Activity name:</strong>
     <%= @activity.activity_name %>
   </p>
-  
-  <p>
-    <strong>Image:</strong>
-    <%= @activity.image %>
-  </p>
+  <% if current_user.admin_level <2 %>
+    <p>
+      <strong>Image:</strong>
+      <%= @activity.image %>
+    </p>
+  <% end %>
   
   
   <p>
@@ -54,27 +55,41 @@
   
   <p>
     <strong>Places taken:</strong>
-    <%= @activity.places_taken %>
+    <%= @activity.places_available %>
   </p>
   
   <p>
     <strong>Created By</strong>
-    <%= @activity.user_id %>
+    <%= @activity.creator.first_name%>
   </p>
 </div>
+  <% if current_user.admin_level >1 %>
+    <ul>
+        <div class="show_page_sub_header">Attendees</div>
+      <% @activity.attendees.each do |user| %>
+        <li><%= user.full_name %>
+      <% end %>
+    </ul>        
+  <%end%>
   
 
 <div class="centered_back_link">
   <div class="button_show">
+  <% if @activity.places_available > 0 && current_user.admin_level <2 %>
     <%= link_to activity_book_path, method: :post do %>
     Book <%= @activity.activity_name %>&nbsp<%= @activity.date %>&nbsp<%= @activity.start_time %><br>
     <% end%>
+  <% else %>
+    <%if current_user.admin_level < 2%>
+      FULLY BOOKED
+    <% end %>
+  <% end %>
   </div>
     <%= link_to 'Cancel This Activity', activity_cancel_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% if current_user.admin_level >1 %>
-   &nbsp | &nbsp
-    <%= link_to 'Edit', edit_activity_path(@activity) %> 
-  <% end %>|
+   <% if current_user.admin_level >1 %>
+  &nbsp | &nbsp
+   <%= link_to 'Edit', edit_activity_path(@activity) %> 
+ <% end %>|
   <%= link_to 'Back', activities_path %>
 </div>
 

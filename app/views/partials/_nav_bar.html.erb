@@ -1,30 +1,36 @@
 <header>
- 
-    
-  <nav class="navbar navbar-light bg-faded">
-    <ul class="nav navbar-nav">
-     <% if current_user %>
-      
-      <li class="nav-item"><%= link_to"All Classes", activities_path, class:"nav-link" %></li>
-      <li class="nav-item"><%= link_to"User Menu", menu_path, class:"nav-link" %></li>
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+    ☰
+      </button>
+        <div class="collapse navbar-toggleable-sm" id="collapsingNavbar2">
+          <ul class="nav navbar-nav">
+          <% if current_user %>
+       
+          
+            <li class="nav-item"><%= link_to"Main Menu", menu_path, class:"admin_nav_link" %></li>
 
-      <li class="nav-item"><%= link_to"My Classes", activities_attending_path, class:"nav-link" %></li>
-      <li class="nav-item"><%= link_to"Membership Card", qr_codes_create_path, class:"nav-link" %></li>
-      <li class="nav-item"><%= link_to"Message", conversations_path, class:"nav-link" %></li>
-      <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, class:"nav-link", method: :delete %></li>
+            <li class="nav-item"><%= link_to"All Classes", activities_path, class:"admin_nav_link" %></li>
 
-        <% if current_user.admin_level > 1 %>
-          <li class="nav-item"><%= link_to"Memberships", membership_types_path, class:"nav-link" %></li>
-          <li class="nav-item"><%= link_to"Fees Paid", membership_fees_path, class:"nav-link" %></li>
-          <li class="nav-item"><%= link_to"User List",users_path, class:"nav-link"%></li>
-        <% end %>
-      
-      <% else %>
-      <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"nav-link" %></li>
-      <li class="nav-item"><%= link_to "Register", new_user_registration_path, class:"nav-link" %></li>
-      <% end %>
-    </ul>
-  </nav>
+            <li class="nav-item"><%= link_to"My Classes", activities_attending_path, class:"admin_nav_link" %></li>
+            <li class="nav-item"><%= link_to"Membership Card", qr_codes_create_path, class:"admin_nav_link" %></li>
+            <li class="nav-item"><%= link_to"Message", conversations_path, class:"admin_nav_link" %></li>
+            <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, class:"admin_nav_link", method: :delete %></li>
+
+              <% if current_user.admin_level > 1 %>
+              <li class="nav-item"><%= link_to"Memberships", membership_types_path, class:"admin_nav_link" %></li>
+              <li class="nav-item"><%= link_to"Fees Paid", membership_fees_path, class:"admin_nav_link" %></li>
+              <li class="nav-item"><%= link_to"User List",users_path, class:"admin_nav_link"%></li>
+              <% end %>
+       
+            <% else %>
+                <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"admin_nav_link" %></li>
+                <li class="nav-item"><%= link_to "Register", new_user_registration_path, class:"admin_nav_link" %></li>
+            <% end %>
+          </div>
+        </div>
+      </nav>
 </header>
 <main>
   <p class="notice"><%= notice %></p>

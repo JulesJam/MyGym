@@ -1,5 +1,6 @@
 class MembershipFeesController < ApplicationController
   before_action :set_membership_fee, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /membership_fees
   # GET /membership_fees.json

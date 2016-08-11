@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :photos
   resources :activity_records
   resources :membership_fees
   resources :membership_types

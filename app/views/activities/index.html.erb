@@ -1,13 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Available Activities</h1>
+<h1 class="title">Available Activities</h1>
 
-<div class="centered_back_link">
-  <% if current_user.admin_level > 1%> 
-  <%= link_to 'Create New Activity', new_activity_path %>&nbsp|&nbsp
-  <% end %>
-<%= link_to 'Menu', menu_path %>
-</div>
+<%= render "partials/back_links"%>
 
 
 
@@ -16,13 +11,13 @@
    <div class="card card-outline-primary text-xs-center">
      <div class="card-block">
        <div class="card-user-thumb">
-         <%= activity.image %> 
+         <%= image_tag activity.image %> 
        </div>
         <h4> <%= activity.activity_name %></h4>
         <h5><%= activity.location %></h5>
         <p> <%= activity.description %></p>
           <blockquote class="card-blockquote">
-               Date: <%= activity.date %> &nbspStart Time: <%=   activity.start_time %>&nbspDuration:<%= activity.duration %>&nbspTotal Places <%= activity.number_of_places %>Places Taken <%= activity.places_taken %>&nbspPlaces Available:<%= activity.places_available%>&nbspThis activity is being run by: <%=activity.creator.first_name%><br><%= activity.status %>
+               Date: <%= activity.date %> &nbspStart Time: <%=   activity.start_time %>&nbspDuration:<%= activity.duration %> Places Available: <%= activity.places_available%>&nbspThis activity is being run by: <%=activity.creator.first_name%><br><%= activity.status %>
           </blockquote>
 
         <% if current_user.admin_level >1 %>

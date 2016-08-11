@@ -30,6 +30,9 @@
         <img class="card-img" src="images/placeholder.png" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title">My classes</h4>
+              <% if current_user.activities_attending.size.to_i>0 %>
+              <div class="indicator"><%=current_user.activities_attending.size%></div>
+              <% end %>
           </div>
       <%end%>
     </div>
@@ -53,10 +56,12 @@
         <%end%>
       </div>
     <div class="card">
+      <%=link_to photos_path do%>
       <img class="card-img" src="images/placeholder.png" alt="Card image cap">
         <div class="card-block">
           <h4 class="card-title">Gallery</h4>
         </div>
+      <% end %>
     </div>
     <div class="card">
       <img class="card-img" src="images/placeholder.png" alt="Card image cap">

@@ -1,0 +1,6 @@
+<div class="centered_back_link">
+  <% if current_user.admin_level > 1%> 
+  <%= link_to 'Create New Activity', new_activity_path %>&nbsp|&nbsp
+  <% end %>
+<%= link_to 'Menu', menu_path %>
+</div>
