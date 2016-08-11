@@ -3,7 +3,10 @@
 <h1>Your Activities</h1>
 
 
-
+<div class="centered_back_link">
+  <%= link_to 'Back', menu_path %>&nbsp|&nbsp
+  <%= link_to 'Choose a new activity', activities_path %>
+</div>
 <% @activities_attending.each do |activity| %>
   <div class="card card-outline-primary text-xs-center">
     <div class="card-block">
@@ -14,17 +17,14 @@
        <h5><%= activity.location %></h5>
        <p> <%= activity.description %></p>
           <blockquote class="card-blockquote">
-            Date: <%= activity.date %> &nbspStart Time: <%activity.start_time %>&nbspDuration:<%= activity.duration %>&nbsp<% places_available = activity.number_of_places.to_i - activity.places_taken.to_i%><%= places_available%>Creator First Name
+            Date: <%= activity.date %> &nbspStart Time: <%activity.start_time %>&nbspDuration:<%= activity.duration %>&nbspAvailable Places: <% places_available = activity.number_of_places.to_i - activity.places_taken.to_i%><%= places_available%><%=activity.creator.first_name%>
           </blockquote>
           <div class="card_bottom_nav">
           
-          <%= link_to 'View this activity', activity %>&nbsp|&nbsp
-          <%= link_to 'Cancel this activity', activity %>
+          <%= link_to 'View / Cancel this activity', activity %><br>
+          
           </div>
         </div>
       </div>
 <% end %>
-<div class="centered_back_link">
-  <%= link_to 'Back', menu_path %>&nbsp|&nbsp
-  <%= link_to 'Choose a new activity', activities_path %>
-</div>
+

@@ -2,37 +2,46 @@
 
 <h1>Available Activities</h1>
 
-
-
-  <tbody>
-    <% @activities.each do |activity| %>
-      <% if activity.active %>
-       <div class="card card-outline-primary text-xs-center">
-         <div class="card-block">
-           <div class="card-user-thumb">
-             <%= activity.image %> 
-           </div>
-            <h4> <%= activity.activity_name %></h4>
-            <h5><%= activity.location %></h5>
-            <p> <%= activity.description %></p>
-               <blockquote class="card-blockquote">
-                 Date: <%= activity.date %> &nbspStart Time: <%=   activity.start_time %>&nbspDuration:<%= activity. duration %>&nbsp<% places_available = activity.  number_of_places.to_i - activity.places_taken.to_i  %><%= places_available%>Creator First Name<br><%= activity.status %>
-               </blockquote>
-               <div class="card_bottom_nav">
-                <%= link_to 'View', activity %>&nbsp|&nbsp
-                <% if current_user.admin_level > 1%>
-                  <%= link_to 'Edit', edit_activity_path(activity) %>
-                 
-                <% end %>
-               </div>
-             </div>
-           </div>
-          <% end %>
-         <% end %>
 <div class="centered_back_link">
   <% if current_user.admin_level > 1%> 
   <%= link_to 'Create New Activity', new_activity_path %>&nbsp|&nbsp
   <% end %>
 <%= link_to 'Menu', menu_path %>
 </div>
+
+
+
+<% @activities.each do |activity| %>
+  <% if activity.active %>
+   <div class="card card-outline-primary text-xs-center">
+     <div class="card-block">
+       <div class="card-user-thumb">
+         <%= activity.image %> 
+       </div>
+        <h4> <%= activity.activity_name %></h4>
+        <h5><%= activity.location %></h5>
+        <p> <%= activity.description %></p>
+          <blockquote class="card-blockquote">
+               Date: <%= activity.date %> &nbspStart Time: <%=   activity.start_time %>&nbspDuration:<%= activity.duration %>&nbspTotal Places <%= activity.number_of_places %>Places Taken <%= activity.places_taken %>&nbspPlaces Available:<%= activity.places_available%>&nbspThis activity is being run by: <%=activity.creator.first_name%><br><%= activity.status %>
+          </blockquote>
+
+        <% if current_user.admin_level >1 %>
+          <ul>
+            <% activity.attendees.each do |user| %>
+              <li><%= user.full_name %>
+            <% end %>
+          </ul>        
+        <%end%>
+
+        <div class="card_bottom_nav">
+          <%= link_to 'View', activity %>
+          <% if current_user.admin_level > 1%>
+          &nbsp|&nbsp
+          <%= link_to 'Edit', edit_activity_path(activity) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
 

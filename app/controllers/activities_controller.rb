@@ -1,10 +1,14 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /activities
   # GET /activities.json
   def index
     @activities = Activity.all
+
+ 
+    
   end
 
   def activities_attending
@@ -85,7 +89,7 @@ class ActivitiesController < ApplicationController
     activity = Activity.find(params[:id])
     current_user.activities_attending << activity
     flash[:notice] = 'Event was saved.'
-    redirect_to activities_path
+    redirect_to activities_attending_path
   end
 
 

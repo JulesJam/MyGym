@@ -7,6 +7,10 @@ p{
   text-align:center;
 }
 
+h1{
+  text-align: center;
+}
+
 .home{
   background-image: url('homepagebackground.png') ;
   background-size: cover;
@@ -237,7 +241,7 @@ a,.centered_back_link{
 
 .show_card{
   background-color:rgba(185, 203, 195, 1.0);
-  width:350px;
+  width:400px;
   margin:0 auto;
   padding:10px;
   font-size: 20px;

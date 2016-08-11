@@ -70,8 +70,9 @@
     Book <%= @activity.activity_name %>&nbsp<%= @activity.date %>&nbsp<%= @activity.start_time %><br>
     <% end%>
   </div>
-  <% if current_user.admin_level >1 %>
-    <%= link_to 'Cancel This Activity', activity_cancel_path, method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp | &nbsp
+    <%= link_to 'Cancel This Activity', activity_cancel_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if current_user.admin_level >1 %>
+   &nbsp | &nbsp
     <%= link_to 'Edit', edit_activity_path(@activity) %> 
   <% end %>|
   <%= link_to 'Back', activities_path %>

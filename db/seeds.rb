@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+["users", "activities"].each do |table_name|
+  ActiveRecord::Base.connection.execute("TRUNCATE #{table_name} RESTART IDENTITY CASCADE")
+end
+
 d1 = Date.new(1967,1,24),
 d2 = Date.new(2016,8,3),
 d3 = Date.new(2017,8,1),
@@ -29,7 +34,7 @@ User.create!([
   last_name:"Wyatt",
   admin_level:4,
   date_of_birth: d1,
-  image:File.open(Rails.root.to_s + "/db/seeds_images/julian.png"),
+  image:File.open(Rails.root.join "db/seeds_images/julian.png"),
   accept_comms:true,
   accept_proms:true,
   mobile_tel_number: "07805574707",
@@ -55,7 +60,7 @@ User.create!([
   last_name:"Morris",
   admin_level:1,
   date_of_birth: d4,
-  image:File.open(Rails.root.to_s + "/db/seeds_images/eifion.png"),
+  image:File.open(Rails.root.join "db/seeds_images/eifion.png"),
   accept_comms:true,
   accept_proms:true,
   mobile_tel_number: "0765748292",
@@ -82,7 +87,7 @@ User.create!([
   last_name:"The Trainer",
   admin_level:2,
   date_of_birth: d7,
-  image:File.open(Rails.root.to_s + "/db/seeds_images/carlos.jpg"),
+  image:File.open(Rails.root.join "db/seeds_images/carlos.jpg"),
   accept_comms:true,
   accept_proms:true,
   mobile_tel_number:"0765758494",
@@ -132,11 +137,55 @@ Activity.create!([
   { activity_name:"Personal Training",
     description: "A professionally guided tarining session where you really have to workout and not just look in the mirror",
     date:d101,
-    places_taken:0,
+    number_of_places: 5,
     status:"Open For Booking",
     active:true,
     user_id:3,
-    image:File.open(Rails.root.to_s + "/db/seeds_images/carlos.jpg"),
+    image:File.open(Rails.root.join "db/seeds_images/carlos.jpg"),
+    
+    
+  },
+  { activity_name:"Personal Training",
+    description: "A professionally guided tarining session where you really have to workout and not just look in the mirror",
+    date:Date.new(2016,8,14),
+    number_of_places: 5,
+    status:"Open For Booking",
+    active:true,
+    user_id:3,
+    image:File.open(Rails.root.join "db/seeds_images/carlos.jpg"),
+    
+    
+  },
+   { activity_name:"Personal Training",
+    description: "A professionally guided tarining session where you really have to workout and not just look in the mirror",
+    date:Date.new(2016,8,15),
+    number_of_places:6,
+    status:"Open For Booking",
+    active:true,
+    user_id:3,
+    image:File.open(Rails.root.join "db/seeds_images/carlos.jpg"),
+    
+    
+  },
+   { activity_name:"Personal Training",
+    description: "A professionally guided tarining session where you really have to workout and not just look in the mirror",
+    date:Date.new(2016,8,17),
+    number_of_places:5,
+    status:"Open For Booking",
+    active:true,
+    user_id:3,
+    image:File.open(Rails.root.join "db/seeds_images/carlos.jpg"),
+    
+    
+  },
+  { activity_name:"Personal Training",
+    description: "A professionally guided tarining session where you really have to workout and not just look in the mirror",
+    date:Date.new(2016,8,17),
+    number_of_places:3,
+    status:"Open For Booking",
+    active:true,
+    user_id:3,
+    image:File.open(Rails.root.join "db/seeds_images/carlos.jpg"),
     
     
   }

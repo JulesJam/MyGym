@@ -15,10 +15,11 @@ class User < ApplicationRecord
     self.admin_level ||= 4
     self.total_visits = 0
     self.user_image = '/images/placeholder.png'
-
   end
 
-
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 
 
   
