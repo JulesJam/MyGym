@@ -1,6 +1,6 @@
 class SecureController < ApplicationController
 
-  before _action :autheticate_user!
+  before_action :autheticate_user!
   
   def index
     @users = User.all
