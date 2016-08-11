@@ -1,117 +1,126 @@
-<div class="home_container signup">
-  <h2 class="home_h2 signup">Sign up</h2>
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<body class="home">
+  <div class="shader">  
+    <div class="home_container signup">
+      <h2 class="home_h2 signup">Sign up</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingOne">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"   aria-controls="collapseOne">
-            Set Log in Details
-          </a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-      <div class="field">
-        <%= f.label :user_image %><br />
-        <%= f.file_field :user_image %>
-      </div>
-  
-      <div class="field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-  
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
-      <div class="field">
-        <%= f.label :membership_type_id %><br />
-        <%= f.collection_radio_buttons :membership_type_id, MembershipType.where(active: true), :id, :title %>
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"   aria-controls="collapseOne" class="signup_title">
+                Set Log in Details
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="field">
+            <%= f.label :email %><br>
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+          <div class="field">
+            <%= f.label :user_image, "Add A Photo" %><br>
+            <%= f.file_field :user_image %>
+          </div>
+      
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+      
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+          <div class="field">
+            <%= f.label :membership_type_id %><br />
+            <%= f.collection_radio_buttons :membership_type_id, MembershipType.where(active: true), :id, :title %>
+          </div>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  aria-expanded="false" aria-controls="collapseTwo" class="signup_title">
+                Your Personal Details
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="field">
+                First Name<br><%= f.text_field :first_name%>
+              </div>
+              <div class="field">
+                Last Name<br><%= f.text_field :last_name%>
+              </div>
+                    
+              <div class="field">
+                Admin Level<br><%= select(:user, :admin_level, [['Super User', 1], ['Admin Use', 2],['Trainer', 3]  ,['Member',4]]) %><br>
+              </div>
+              <div>      
+                Date Of Birth<br><%= f.date_field :date_of_birth%>
+              </div>
+              <div class="field">
+                Are you happy to receive notifications?<br><%= f.check_box :accept_comms%>
+              </div>
+              <div class="field">
+               Are you happy to receive promotions?<br><%= f.check_box :accept_proms%>
+              </div>
+              <div class="field">
+               Mobile Telephone Number<br><%= f.telephone_field :mobile_tel_number%>
+              </div>
+              <div class="field">
+                Are you happy to receive text reminders?<br><%= f.check_box :accept_proms%>
+              </div>
+            </div>
+          </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  aria-expanded="false" aria-controls="collapseThree" class="signup_title">
+                Address Details
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="field">
+              Post Code<br><%= f.text_field :post_code%>
+            </div>
+            <div class="field">
+             House or flat, Name/Number<br><%= f.text_field :house_flat_name_number%>
+            </div>
+            <div class="field">
+             Street Address<br><%= f.text_field :street_address, name: "address1"%>
+            </div>
+            <div class="field">
+             Locality<br><%= f.text_field :locality%>
+            </div>
+            <div class="field">
+             City<br><%= f.text_field :city%>
+            </div>
+            <div class="actions">
+              <%= f.submit "Sign up" %>
+            </div>
+      
+          </div>
+        </div>
       </div>
 
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingTwo">
-        <h4 class="panel-title">
-          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  aria-expanded="false" aria-controls="collapseTwo">
-            Your Personal Details
-          </a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="field">
-            First Name<br><%= f.text_field :first_name%>
-          </div>
-          <div class="field">
-            Last Name<br><%= f.text_field :last_name%>
-          </div>
-                
-          <div class="field">
-            Admin Level<br><%= select(:user, :admin_level, [['Super User', 1], ['Admin Use', 2],['Trainer', 3]  ,['Member',4]]) %><br>
-          </div>
-          <div>      
-            Date Of Birth<br><%= f.date_field :date_of_birth%>
-          </div>
-          <div class="field">
-            Are you happy to receive notifications?<br><%= f.check_box :accept_comms%>
-          </div>
-          <div class="field">
-           Are you happy to receive promotions?<br><%= f.check_box :accept_proms%>
-          </div>
-          <div class="field">
-           Mobile Telephone Number<br><%= f.telephone_field :mobile_tel_number%>
-          </div>
-          <div class="field">
-            Are you happy to receive text reminders?<br><%= f.check_box :accept_proms%>
-          </div>
-        </div>
-      </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingThree">
-        <h4 class="panel-title">
-          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  aria-expanded="false" aria-controls="collapseThree">
-            Address Details
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-        <div class="field">
-          Post Code<br><%= f.text_field :post_code%>
-        </div>
-        <div class="field">
-         House or flat, Name/Number<br><%= f.text_field :house_flat_name_number%>
-        </div>
-        <div class="field">
-         Street Address<br><%= f.text_field :street_address, name: "address1"%>
-        </div>
-        <div class="field">
-         Locality<br><%= f.text_field :locality%>
-        </div>
-        <div class="field">
-         City<br><%= f.text_field :city%>
-        </div>
-        <div class="actions">
-          <%= f.submit "Sign up" %>
-        </div>
-  
-      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+    <ul>
+      <li><%=link_to"More Info...",about_path, class: "homepage_nav"%></li>
+      <li class="homepage_nav">Gallery</li>
+      <li><%=link_to"Contact Us",contact_us_path ,class: "homepage_nav"%></li>
+    </ul>
     </div>
   </div>
-
-<% end %>
-
-<%= render "devise/shared/links" %>
-</div>
-          
+</body>
+              
 

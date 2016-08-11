@@ -6,13 +6,13 @@
 
       <div id="opening_times">
         <ul>
-          <li>Monday: 7:00am to 10:00pm</li>
-          <li>Tuesday: 7:00am to 10:00pm</li>
-          <li>Wednesday: 7:00am to 10:00pm</li>
-          <li>Thursday: 7:00am to 10:00pm</li>
-          <li>Friday: 7:00am to 9:00pm</li>
-          <li>Saturday: 8:00am to 3:00pm</li>
-          <li>Sunday Closed</li>
+          <li class="homepage_nav">Monday: 7:00am to 10:00pm</li>
+          <li class="homepage_nav">Tuesday: 7:00am to 10:00pm</li>
+          <li class="homepage_nav">Wednesday: 7:00am to 10:00pm</li>
+          <li class="homepage_nav">Thursday: 7:00am to 10:00pm</li>
+          <li class="homepage_nav">Friday: 7:00am to 9:00pm</li>
+          <li class="homepage_nav">Saturday: 8:00am to 3:00pm</li>
+          <li class="homepage_nav">Sunday Closed</li>
 
         </ul>
       </div>
@@ -21,9 +21,9 @@
       </div>
       <div class="welcome_bottom_nav">
         <ul>
-          <li>More Info...</li>
-          <li>Gallery</li>
-          <li>Contact Us</li>
+          <li><%=link_to"More Info...",about_path, class: "homepage_nav"%></li>
+          <li class="homepage_nav">Gallery</li>
+          <li><%=link_to"Contact Us",contact_us_path ,class: "homepage_nav"%></li>
         </ul>
       </div>
     </div>

@@ -1,2 +1,21 @@
-<h1>Statics#about</h1>
-<p>Find me in app/views/statics/about.html.erb</p>
+<body class="home">
+  <div class="shader">
+    <div class="home_container">
+      <h2 class="home_h2">About the My Gym App</h2>
+      <div>
+        <blockquote>The my Gym app is designed to enable owners trainers and members get the most out of the gym it has features to help with administration, communication, organisation and motivation.... </blockquote>
+        <ul>
+          <li class="homepage_nav">Administration...The my gym app enables new memebrs to register on line, the system has a full password secure administraion suite built in and incoprorates a QR code technology membership card which could be linked to a door entry system or turnstile. The membership card is linked to membership fee payment records. Owners can see who has and who has not paid and can maintain a list of different membership types.</li>
+          <li class="homepage_nav">Trainers can add edit and update classes they provide and see statistics on how many users have attended classes.</li>
+          <li class="homepage_nav">There is a secure messaging system which means trainers and memebers do not have to use theri personal email, messages or mobile number for communication</li>
+          <li class="homepage_nav">The sytem can provide motivation through simple statistics on user visits, this could be liked to motivational remindr messages in future</li>
+        </ul>
+      </div>
+      <ul>
+        <li><%=link_to"Home",home_path, class: "homepage_nav"%></li>
+        <li class="homepage_nav">Gallery</li>
+        <li><%=link_to"Contact Us",contact_us_path ,class: "homepage_nav"%></li>
+      </ul>
+    </div>
+  </div>
+</body>

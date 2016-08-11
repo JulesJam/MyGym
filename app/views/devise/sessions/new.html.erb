@@ -27,6 +27,13 @@
       <% end %>
 
       <%= render "devise/shared/links" %>
+      <div class="welcome_bottom_nav">
+        <ul>
+          <li><%=link_to"More Info...",about_path, class: "homepage_nav"%></li>
+          <li class="homepage_nav">Gallery</li>
+          <li><%=link_to"Contact Us",contact_us_path ,class: "homepage_nav"%></li>
+        </ul>
+      </div>
       </div>
     </div>
 </body>
