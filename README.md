@@ -19,12 +19,20 @@ The idea behind the MyGym app is that it could be used the owner of gym to provi
 * There is a secure messaging system which means trainers and members do not have to use theri personal email, messages or mobile number for communication
 * The sytem can provide motivation through simple statistics on user visits, this could be liked to motivational remindr messages in future
 
+###User Journeys
+
+To determine what database structure may be required I created a series of user journeys 
+
+
+![](readmeimages/userstories.png?raw=true)
+
 ###Databse ERD
 
-[Click here to see the database ERD](https://github.com/JulesJam/WDI_21_PROJECT_2/blob/master/readmeimages/ERD%20.png)
+![](readmeimages/ERD%20.png?raw=true)
+
+![](readmeimages/Fields.png?raw=true)
 
 
-[Click here for the table structures](https://github.com/JulesJam/WDI_21_PROJECT_2/blob/master/readmeimages/Fields.png)
 
 
 
@@ -68,6 +76,7 @@ Some features are still ind development at this time
 * Membership payments is not yet linked in
 * Automated messaging when booking classes
 * The picture gallery is currently very simplistic
+* Some validations and fucntionality need to be moved from the views to the models
 
 
 ### Troubleshooting
