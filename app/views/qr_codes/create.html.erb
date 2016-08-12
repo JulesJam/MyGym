@@ -1,6 +1,6 @@
 <div class="membership_card">
   <h1 class="membership_card"><%=@user.first_name%>&nbsp<%=@user.last_name%></h1>
-    <div ><%= image_tag @user.image, width:300 %></div>
+    <div ><%= image_tag @user.image, width:100 %></div>
       <%=link_to "MENU", menu_path, class: "membership_link_to_menu"%>
       <%if  @expiry =="Expired"%>
       <br>
