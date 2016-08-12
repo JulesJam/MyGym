@@ -1,45 +1,54 @@
 <p id="notice"><%= notice %></p>
-<div class="show_card_wide">
+<div class="show_card">
   <p>
-    <strong>User:</strong>
+    <strong>This is:</strong>
     <%= @user.username %><br>
     Mobile Number:<%=@user.mobile_tel_number%><br>
-    <%=@user.admin_level%>
+    <%=@user.admin_level%><br><%=@user.email%>
   </p>
   
   <p>
     <%=image_tag @user.image %>
   </p>
 
- <div class="user_contact_card"> 
-  <div class="user_contact_details">
-    <ul>
-      <li class="user_details">First Name: <%=@user.first_name%></li>
-      <li class="user_details">Last Name: <%=@user.last_name%></li>
-      <li class="user_details">Date Of Birth:<%=@user.date_of_birth%> </li>
-      <li class="user_details">Accepts Comms: <%@user.accept_comms%></li>
-      <li class="user_details">Accept Proms:<%=@user.accept_proms%></li>
-      <li class="user_details">Accept Texts:<%@user.accept_texts%></li>
-      <li class="user_details">Other Contcat Number:<%=@user.other_tel_number%></li>
-    </ul>
-  </div>
-  <div class="user_address_details">
-  <ul>
-      <li class="user_details">First Name: <%=@user.first_name%></li>
-      <li class="user_details">Last Name: <%=@user.last_name%></li>
-      <li class="user_details">Date Of Birth:<%=@user.date_of_birth%> </li>
-      <li class="user_details">Accepts Comms: <%@user.accept_comms%></li>
-      <li class="user_details">Accept Proms:<%=@user.accept_proms%></li>
-      <li class="user_details">Accept Texts:<%@user.accept_texts%></li>
-      <li class="user_details">Other Contcat Number:<%=@user.other_tel_number%></li>
-  </ul>
-  </div>
-  
-  
+ <div class="container"> 
+  <div class="card-group">
+    <div class="card">
+      <ul>
+        <li class="user_details">First Name: <%=@user.first_name%></li>
+        <li class="user_details">Last Name: <%=@user.last_name%></li>
+        <li class="user_details">Date Of Birth:<%=@user.date_of_birth%> </li>
+        <li class="user_details">Accepts Comms: <%=@user.accept_comms%></li>
+        <li class="user_details">Accept Proms:<%=@user.accept_proms%></li>
+        <li class="user_details">Accept Texts:<%@user.accept_texts%></li>
+        <li class="user_details">Other Contact Number:<%=@user.other_tel_number%></li>
+      </ul>
+    </div>
 
+    <div class="card">
+      <ul>
+        <li class="user_details">House No: <%=@user.house_flat_name_number%></li>
+       <li class="user_details">Street Address: <%=@user.street_address%></li>
+        <li class="locality">Town: <%=@user.locality%> </li>
+        <li class="user_details">City: <%=@user.city%></li>
+        <li class="user_details">Postcode:<%=@user.post_code%></li>
+        
+      </ul>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <ul>
+          <li class="user_details">Joined: <%=@user.created_at%></li>
+          <li class="user_details">Last Visit: <%=@user.last_visit_date%></li>
+          <li class="user_details">Total Visits:<%=@user.total_visits%> </li>
+          <li class="user_details">Membership Expiry Date: <%=@user.membership_expiry_date%></li>
+          <li class="user_details">Membership Type Date: <%=@user.membership_type_id%></li>
+          <li class="user_details">Profile: <%=@user.profile%></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 <div class="centered_back_link">
-   <%= link_to 'Edit', edit_user_registration_path(@user) %> 
-
   <%= link_to 'Back', users_path%>
 </div>
 
