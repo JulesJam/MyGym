@@ -63,6 +63,7 @@ julian.wyatt@tradescant.co.uk
 
 Some features are still ind development at this time
 
+* Tests need to be added
 * Admin cannot edit users only a user can edit themselves
 * Membership payments is not yet linked in
 * Automated messaging when booking classes
