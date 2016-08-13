@@ -129,7 +129,7 @@ User.create!([
   last_name:"Bob",
   admin_level:2,
   date_of_birth: Date.new(1991,3,11),
-  image:File.open(Rails.root.join "db/seeds_images/janey.jpg"),
+  image:File.open(Rails.root.join "db/seeds_images/bob.jpg"),
   accept_comms:true,
   accept_proms:false,
   mobile_tel_number:"0734478494",

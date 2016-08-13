@@ -5,7 +5,19 @@
 
 The MyGym app was a project for buidling a multi model Rail app. This is the __first app__ I have built using _Ruby On Rails_
 
-the working app can be seen on [Heroku https://mygymapp.herokuapp.com/](https://mygymapp.herokuapp.com/)
+###Technologies employed...
+
+##### Ruby Gems
+
+* devise 4.2.0 for authentication
+* carrierwave 0.10.0 for file uploads
+* rmagick loaded but not yet implemented for image manipulation
+* bootstrap 4.0.0.aplpha3.1 for underlying CSS
+* rqrcode-with-patches 0.5.4 for QR code creation
+* ideal_postcodes tested but not yet fully deployed for postcode look up
+
+
+The working app can be seen on [Heroku https://mygymapp.herokuapp.com/](https://mygymapp.herokuapp.com/)
 
 The idea behind the MyGym app is that it could be used the owner of gym to provide not only a website for their business but it would also help with administration, communication, organistaion and motivation of members. The sytem allows:
 
