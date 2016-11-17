@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :created_activities, class_name: "Activity", foreign_key: "user_id"
-  has_and_belongs_to_many :activities_attending,-> { uniq }, class_name: "Activity", join_table: "activities_users"
+  has_and_belongs_to_many :activities_attending,-> { distinct }, class_name: "Activity", join_table: "activities_users"
   after_initialize :set_default
 
   has_many :activity_records, through: :activities
@@ -24,7 +24,6 @@ class User < ApplicationRecord
   end
 
   def member_type (current_user)
-     
     case current_user.admin_level
     when 1
       "Member"
@@ -37,9 +36,8 @@ class User < ApplicationRecord
     end
   end
 
-  def encouragement_icon_total (current_user)
-
-    if current_user.total_visits = 0
+  def encouragement_icon_total(current_user)
+    if current_user.total_visits == 0
       "😡"
     elsif current_user.total_visits > 3
       "🤔"
@@ -51,8 +49,7 @@ class User < ApplicationRecord
   end
 
   def encouragement_icon_classes (classes)
-
-    if classes = 0
+    if classes == 0
       "😡"
     elsif classes >3
       "🤔"

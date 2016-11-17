@@ -15,9 +15,4 @@ class Activity < ApplicationRecord
     number_of_places - places_taken
   end
 
-    
- 
-
-
-
 end
