@@ -17,7 +17,8 @@ The MyGym app was a project for buidling a multi model Rail app. This is the __f
 * ideal_postcodes tested but not yet fully deployed for postcode look up
 
 
-The working app can be seen on [Heroku https://mygymapp.herokuapp.com/](https://mygymapp.herokuapp.com/)
+The working app can be seen on [Heroku https://mygymapp.herokuapp.com/]
+(https://mygymapp.herokuapp.com/)
 
 The idea behind the MyGym app is that it could be used the owner of gym to provide not only a website for their business but it would also help with administration, communication, organistaion and motivation of members. The sytem allows:
 
