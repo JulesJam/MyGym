@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   has_many :photos
 
-  mount_uploader :image, UserImageUploader
+  mount_uploader :user_image, UserImageUploader
 
   def set_default
     self.admin_level ||= 1
